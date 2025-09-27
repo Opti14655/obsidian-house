@@ -71,7 +71,7 @@ export default function Home() {
                     <Shield className="w-5 h-5 text-yellow-400 mr-2" />
                     <h2 className="text-3xl font-light text-yellow-400">ARCHIVE No.001</h2>
                   </div>
-                  <p className="text-gray-300 mb-6 font-light">Fresh pineapple meets smoky birch. Elegant musk wraps it all together.</p>
+                  <p className="text-gray-300 mb-6 font-light">Fresh mango meets smoky birch. Elegant musk wraps it all together.</p>
                   
                   <div className="flex items-center justify-center md:justify-start space-x-8 mb-6">
                     <div className="text-center md:text-left">
@@ -172,7 +172,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
                 <h3 className="text-lg font-medium text-yellow-400 mb-3">Opening</h3>
-                <p className="text-gray-300 font-light">Fresh Pineapple, Bergamot, Blackcurrant</p>
+                <p className="text-gray-300 font-light">Fresh Mango, Bergamot, Blackcurrant</p>
                 <p className="text-gray-500 text-sm mt-2">Confident and Sophisticated</p>
               </div>
               <div>

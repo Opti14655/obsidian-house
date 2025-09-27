@@ -47,7 +47,7 @@ export default function ProductPage() {
               </h1>
               <p className="mt-4 text-lg font-light text-slate-600 leading-relaxed">
                 Our inaugural fragrance - a masterfully crafted Aventus-inspired blend that embodies luxury and exclusivity. 
-                Opening with vibrant pineapple, bergamot, and blackcurrant, transitioning to smoky birch and jasmine, 
+                Opening with vibrant mango, bergamot, and blackcurrant, transitioning to smoky birch and jasmine,
                 before settling into an elegant base of musk, oakmoss, and ambergris.
               </p>
             </div>
@@ -139,7 +139,7 @@ export default function ProductPage() {
             <div className="text-center">
               <h3 className="text-xl font-medium text-slate-800 mb-4">Top Notes</h3>
               <p className="text-slate-600 font-light leading-relaxed">
-                Fresh Pineapple, Bergamot, Blackcurrant
+                Fresh Mango, Bergamot, Blackcurrant
               </p>
             </div>
             <div className="text-center">
