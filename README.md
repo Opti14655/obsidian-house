@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Obsidian House - Luxury Fragrance Store
+
+A sophisticated e-commerce website for selling premium Creed Aventus 100ml bottles. Built with Next.js, TypeScript, and Tailwind CSS.
+
+## Features
+
+- **Elegant Design**: Niche fragrance aesthetic with luxury branding
+- **Single Product Focus**: Optimized for selling Creed Aventus 100ml bottles ($160 each)
+- **Payment Processing**: Stripe integration for secure transactions
+- **Shipping Management**: Complete shipping information collection
+- **Admin Dashboard**: Order management and inventory tracking
+- **Responsive**: Works perfectly on all devices
+- **Stock Management**: Track your 9 bottles inventory
+
+## Tech Stack
+
+- **Frontend**: Next.js 15, React 18, TypeScript
+- **Styling**: Tailwind CSS with custom design system
+- **Database**: PostgreSQL with Prisma ORM
+- **Payments**: Stripe integration
+- **Icons**: Lucide React
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js 18+ installed
+- PostgreSQL database
+- Stripe account for payment processing
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Set up environment variables:**
+   
+   Update the `.env` file with your actual credentials:
+   ```env
+   # Database
+   DATABASE_URL="postgresql://username:password@localhost:5432/cologne_store?schema=public"
+   
+   # NextAuth (generate a random secret)
+   NEXTAUTH_SECRET="your-super-secret-key-here"
+   NEXTAUTH_URL="http://localhost:3000"
+   
+   # Stripe (get from your Stripe dashboard)
+   NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY="pk_test_..."
+   STRIPE_SECRET_KEY="sk_test_..."
+   STRIPE_WEBHOOK_SECRET="whsec_..."
+   
+   # App
+   NEXT_PUBLIC_APP_URL="http://localhost:3000"
+   ```
 
-## Learn More
+3. **Set up the database:**
+   ```bash
+   # Generate Prisma client
+   npx prisma generate
+   
+   # Run database migrations
+   npx prisma db push
+   
+   # Seed the database with your product
+   npx ts-node src/lib/seed.ts
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   Open [http://localhost:3000](http://localhost:3000) to view your store.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Stripe Setup
 
-## Deploy on Vercel
+1. **Create a Stripe account** at [stripe.com](https://stripe.com)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Get your API keys:**
+   - Go to Developers → API keys
+   - Copy your Publishable key and Secret key
+   - Add them to your `.env` file
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Set up webhooks (for production):**
+   - Go to Developers → Webhooks
+   - Add endpoint: `https://yourdomain.com/api/webhooks/stripe`
+   - Select events: `payment_intent.succeeded`, `payment_intent.payment_failed`
+
+## Pages Overview
+
+- **Homepage** (`/`): Elegant landing page showcasing Creed Aventus
+- **Product Page** (`/product`): Detailed product view with purchase options
+- **Checkout** (`/checkout`): Complete checkout flow with shipping and payment
+- **Admin Dashboard** (`/admin`): Order management and inventory tracking
+
+## Order Management
+
+### Processing Orders
+1. Visit `/admin` to view new orders
+2. Orders start with status "paid" after successful payment
+3. Click "Ship Order" and enter tracking number
+4. Status updates to "shipped"
+5. Customer receives shipping confirmation (when email is set up)
+
+### Inventory Management
+- Track remaining stock in admin dashboard
+- Update inventory count manually
+- System prevents overselling
+
+## Production Deployment
+
+### Recommended: Vercel
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Add environment variables in Vercel dashboard
+4. Deploy!
+
+### Database
+- Use a managed PostgreSQL service like Railway, Supabase, or PlanetScale
+
+## Security Notes
+
+- Never commit your `.env` file
+- Use Stripe's test keys during development
+- Always validate payments on the server side
+- Keep your webhook secret secure
+
+---
+
+**Ready to start selling luxury fragrances!** 🍯✨

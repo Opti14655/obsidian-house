@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="500" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="obsidianGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#2C2C2C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A0A0A;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Ornate outer scrollwork -->
+  <path d="M50 120 Q30 100 20 80 Q10 60 15 40 Q20 20 40 15 Q60 10 80 20 Q100 30 120 50 L280 50 Q300 30 320 20 Q340 10 360 15 Q380 20 385 40 Q390 60 380 80 Q370 100 350 120 L350 350 Q370 370 380 390 Q390 410 385 430 Q380 450 360 455 Q340 460 320 450 Q300 440 280 420 L120 420 Q100 440 80 450 Q60 460 40 455 Q20 450 15 430 Q10 410 20 390 Q30 370 50 350 Z" 
+        fill="url(#goldGradient)" stroke="#8B4513" stroke-width="2"/>
+  
+  <!-- Inner ornamental flourishes -->
+  <path d="M70 140 Q60 130 55 120 Q50 110 52 100 Q54 90 62 87 Q70 85 78 90 Q85 95 90 105 L310 105 Q315 95 322 90 Q330 85 338 87 Q346 90 348 100 Q350 110 345 120 Q340 130 330 140 L330 330 Q340 340 345 350 Q350 360 348 370 Q346 380 338 383 Q330 385 322 380 Q315 375 310 365 L90 365 Q85 375 78 380 Q70 385 62 383 Q54 380 52 370 Q50 360 55 350 Q60 340 70 330 Z" 
+        fill="url(#goldGradient)" opacity="0.7"/>
+  
+  <!-- Central shield -->
+  <path d="M120 160 L280 160 Q290 160 290 170 L290 280 Q290 320 200 360 Q110 320 110 280 L110 170 Q110 160 120 160 Z" 
+        fill="url(#obsidianGradient)" stroke="url(#goldGradient)" stroke-width="3"/>
+  
+  <!-- Heraldic eagle crest -->
+  <g transform="translate(200, 140)">
+    <path d="M0 -20 Q-15 -25 -25 -15 Q-30 -5 -25 5 Q-20 10 -10 8 Q-5 6 0 0 Q5 6 10 8 Q20 10 25 5 Q30 -5 25 -15 Q15 -25 0 -20 Z" 
+          fill="url(#goldGradient)"/>
+    <path d="M-20 -10 Q-25 -15 -30 -10 Q-35 -5 -30 0 Q-25 5 -20 3 M20 -10 Q25 -15 30 -10 Q35 -5 30 0 Q25 5 20 3" 
+          fill="url(#goldGradient)" opacity="0.8"/>
+    <circle cx="0" cy="-15" r="3" fill="#FF0000"/>
+  </g>
+  
+  <!-- Central lion rampant -->
+  <g transform="translate(200, 220)">
+    <path d="M-25 20 Q-30 15 -28 10 Q-25 5 -20 8 L-15 12 Q-10 15 -5 12 L0 8 Q5 12 10 15 L15 12 Q20 8 25 5 Q28 10 30 15 Q25 20 20 18 L15 15 Q10 18 5 15 L0 12 Q-5 15 -10 18 L-15 15 Q-20 18 -25 20 Z" 
+          fill="url(#goldGradient)"/>
+    <path d="M-15 0 Q-20 -5 -15 -10 Q-10 -15 -5 -10 L0 -5 Q5 -10 10 -15 Q15 -10 15 -5 Q10 0 5 -2 L0 2 Q-5 -2 -10 0 Q-15 2 -15 0 Z" 
+          fill="url(#goldGradient)"/>
+    <circle cx="0" cy="-8" r="2" fill="#8B0000"/>
+  </g>
+  
+  <!-- Diagonal band (bend sinister) -->
+  <path d="M130 180 L270 300 Q275 305 270 310 L265 315 Q260 320 255 315 L115 195 Q110 190 115 185 L120 180 Q125 175 130 180 Z" 
+        fill="url(#goldGradient)" opacity="0.6"/>
+  
+  <!-- Bottom banner with text space -->
+  <rect x="80" y="380" width="240" height="60" rx="10" 
+        fill="url(#obsidianGradient)" stroke="url(#goldGradient)" stroke-width="2"/>
+  
+  <!-- Ornamental corner flourishes -->
+  <g transform="translate(100, 400)">
+    <path d="M0 0 Q-10 -5 -15 0 Q-20 5 -15 10 Q-10 15 0 10 Q10 5 15 0 Q10 -5 0 0" 
+          fill="url(#goldGradient)" opacity="0.8"/>
+  </g>
+  <g transform="translate(300, 400)">
+    <path d="M0 0 Q10 -5 15 0 Q20 5 15 10 Q10 15 0 10 Q-10 5 -15 0 Q-10 -5 0 0" 
+          fill="url(#goldGradient)" opacity="0.8"/>
+  </g>
+  <g transform="translate(100, 420)">
+    <path d="M0 0 Q-10 5 -15 10 Q-20 15 -15 20 Q-10 25 0 20 Q10 15 15 10 Q10 5 0 0" 
+          fill="url(#goldGradient)" opacity="0.8"/>
+  </g>
+  <g transform="translate(300, 420)">
+    <path d="M0 0 Q10 5 15 10 Q20 15 15 20 Q10 25 0 20 Q-10 15 -15 10 Q-10 5 0 0" 
+          fill="url(#goldGradient)" opacity="0.8"/>
+  </g>
+</svg>

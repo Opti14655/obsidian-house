@@ -1,0 +1,50 @@
+import { NextRequest, NextResponse } from 'next/server'
+import Stripe from 'stripe'
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  apiVersion: '2024-12-18.acacia',
+})
+
+export async function POST(request: NextRequest) {
+  try {
+    const { amount, shippingInfo, quantity } = await request.json()
+
+    // Create a PaymentIntent with the order amount and currency
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: Math.round(amount * 100), // Stripe expects amount in cents
+      currency: 'usd',
+      metadata: {
+        product: 'Creed Aventus 100ml',
+        quantity: quantity.toString(),
+        customer_email: shippingInfo.email,
+        customer_name: `${shippingInfo.firstName} ${shippingInfo.lastName}`,
+      },
+      shipping: {
+        name: `${shippingInfo.firstName} ${shippingInfo.lastName}`,
+        phone: shippingInfo.phone,
+        address: {
+          line1: shippingInfo.address,
+          line2: shippingInfo.address2 || '',
+          city: shippingInfo.city,
+          state: shippingInfo.state,
+          postal_code: shippingInfo.zipCode,
+          country: shippingInfo.country === 'United States' ? 'US' : 'CA',
+        }
+      },
+      automatic_payment_methods: {
+        enabled: true,
+      },
+    })
+
+    return NextResponse.json({
+      clientSecret: paymentIntent.client_secret,
+      paymentIntentId: paymentIntent.id,
+    })
+  } catch (err: any) {
+    console.error('Error creating payment intent:', err)
+    return NextResponse.json(
+      { error: err.message || 'Internal server error' },
+      { status: 500 }
+    )
+  }
+}

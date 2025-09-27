@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Cinematic background -->
+    <radialGradient id="cinematicBg" cx="50%" cy="45%" r="85%">
+      <stop offset="0%" style="stop-color:#2C2C2C;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#1C1C1C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A0A0A;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Gold shimmer gradients -->
+    <linearGradient id="goldShimmer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#FFA500;stop-opacity:0.8" />
+      <stop offset="70%" style="stop-color:#FF8C00;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:0.4" />
+    </linearGradient>
+    
+    <radialGradient id="ingredientGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Birch bark texture -->
+    <linearGradient id="birchTexture" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5F5DC;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#DDBF94;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#8B7355;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Jasmine petal -->
+    <radialGradient id="jasminePetal" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#FFFACD;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFF8DC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0E68C;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Ambergris texture -->
+    <radialGradient id="ambergrisTexture" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#DAA520;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#B8860B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Shimmer animation effects -->
+    <filter id="shimmerGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="ingredientGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Instagram Reel 4:5 cinematic background -->
+  <rect width="1080" height="1350" fill="url(#cinematicBg)"/>
+  
+  <!-- Ambient golden atmosphere -->
+  <circle cx="540" cy="675" r="400" fill="url(#ingredientGlow)" opacity="0.3"/>
+  <circle cx="200" cy="400" r="200" fill="url(#ingredientGlow)" opacity="0.15"/>
+  <circle cx="880" cy="900" r="180" fill="url(#ingredientGlow)" opacity="0.12"/>
+  
+  <!-- Birch Ingredient (Top Left) -->
+  <g transform="translate(280, 350)" filter="url(#ingredientGlow)">
+    <!-- Birch bark piece -->
+    <path d="M-60 -30 
+             L60 -25 
+             Q70 -20 68 -10 
+             L65 20 
+             Q60 35 45 40 
+             L-45 35 
+             Q-65 25 -68 10 
+             L-65 -15 
+             Q-60 -25 -60 -30 Z" 
+          fill="url(#birchTexture)" 
+          stroke="#8B7355" stroke-width="2"/>
+    
+    <!-- Birch bark texture lines -->
+    <g opacity="0.6">
+      <path d="M-50 -15 L50 -10 M-45 0 L45 5 M-40 15 L40 20" 
+            stroke="#654321" stroke-width="1" fill="none"/>
+      <path d="M-30 -20 L-28 30 M-10 -18 L-8 32 M10 -16 L12 34 M30 -14 L32 36" 
+            stroke="#8B7355" stroke-width="0.8" fill="none"/>
+    </g>
+    
+    <!-- Gold shimmer overlay -->
+    <ellipse cx="0" cy="0" rx="80" ry="45" 
+             fill="url(#goldShimmer)" opacity="0.4"/>
+    
+    <!-- Ingredient label -->
+    <text x="0" y="70" text-anchor="middle" 
+          font-family="serif" font-size="18" font-weight="600" 
+          fill="url(#goldShimmer)">BIRCH</text>
+    <text x="0" y="90" text-anchor="middle" 
+          font-family="serif" font-size="12" font-weight="400" 
+          fill="#B8860B">Silver Bark Extract</text>
+  </g>
+  
+  <!-- Jasmine Ingredient (Center) -->
+  <g transform="translate(540, 525)" filter="url(#ingredientGlow)">
+    <!-- Jasmine flower -->
+    <g>
+      <!-- Central flower core -->
+      <circle cx="0" cy="0" r="15" 
+              fill="#F0E68C" stroke="#DAA520" stroke-width="1"/>
+      
+      <!-- Jasmine petals -->
+      <g>
+        <ellipse cx="0" cy="-25" rx="12" ry="20" 
+                 fill="url(#jasminePetal)" stroke="#F0E68C" stroke-width="1"/>
+        <ellipse cx="22" cy="-12" rx="12" ry="20" 
+                 fill="url(#jasminePetal)" stroke="#F0E68C" stroke-width="1" 
+                 transform="rotate(60)"/>
+        <ellipse cx="22" cy="12" rx="12" ry="20" 
+                 fill="url(#jasminePetal)" stroke="#F0E68C" stroke-width="1" 
+                 transform="rotate(120)"/>
+        <ellipse cx="0" cy="25" rx="12" ry="20" 
+                 fill="url(#jasminePetal)" stroke="#F0E68C" stroke-width="1" 
+                 transform="rotate(180)"/>
+        <ellipse cx="-22" cy="12" rx="12" ry="20" 
+                 fill="url(#jasminePetal)" stroke="#F0E68C" stroke-width="1" 
+                 transform="rotate(240)"/>
+        <ellipse cx="-22" cy="-12" rx="12" ry="20" 
+                 fill="url(#jasminePetal)" stroke="#F0E68C" stroke-width="1" 
+                 transform="rotate(300)"/>
+      </g>
+      
+      <!-- Jasmine leaves -->
+      <ellipse cx="-35" cy="20" rx="8" ry="15" 
+               fill="#9ACD32" opacity="0.8" transform="rotate(-30)"/>
+      <ellipse cx="35" cy="-20" rx="8" ry="15" 
+               fill="#9ACD32" opacity="0.8" transform="rotate(30)"/>
+    </g>
+    
+    <!-- Gold shimmer overlay -->
+    <circle cx="0" cy="0" r="50" 
+            fill="url(#goldShimmer)" opacity="0.3"/>
+    
+    <!-- Ingredient label -->
+    <text x="0" y="80" text-anchor="middle" 
+          font-family="serif" font-size="18" font-weight="600" 
+          fill="url(#goldShimmer)">JASMINE</text>
+    <text x="0" y="100" text-anchor="middle" 
+          font-family="serif" font-size="12" font-weight="400" 
+          fill="#B8860B">Night-Blooming Absolute</text>
+  </g>
+  
+  <!-- Ambergris Ingredient (Bottom Right) -->
+  <g transform="translate(800, 700)" filter="url(#ingredientGlow)">
+    <!-- Ambergris chunk -->
+    <path d="M-45 -25 
+             Q-50 -30 -40 -35 
+             L20 -40 
+             Q40 -35 45 -20 
+             L50 10 
+             Q45 30 25 35 
+             L-25 40 
+             Q-45 35 -50 15 
+             L-48 -10 
+             Q-45 -20 -45 -25 Z" 
+          fill="url(#ambergrisTexture)" 
+          stroke="#8B4513" stroke-width="2"/>
+    
+    <!-- Ambergris surface texture -->
+    <g opacity="0.7">
+      <ellipse cx="-15" cy="-10" rx="8" ry="5" 
+               fill="#DAA520" opacity="0.6"/>
+      <ellipse cx="10" cy="5" rx="6" ry="4" 
+               fill="#FFD700" opacity="0.5"/>
+      <ellipse cx="-5" cy="15" rx="4" ry="3" 
+               fill="#B8860B" opacity="0.6"/>
+    </g>
+    
+    <!-- Gold shimmer overlay -->
+    <ellipse cx="0" cy="0" rx="70" ry="50" 
+             fill="url(#goldShimmer)" opacity="0.4"/>
+    
+    <!-- Ingredient label -->
+    <text x="0" y="75" text-anchor="middle" 
+          font-family="serif" font-size="18" font-weight="600" 
+          fill="url(#goldShimmer)">AMBERGRIS</text>
+    <text x="0" y="95" text-anchor="middle" 
+          font-family="serif" font-size="12" font-weight="400" 
+          fill="#B8860B">Oceanic Essence</text>
+  </g>
+  
+  <!-- Floating particles and shimmer effects -->
+  <g opacity="0.8" filter="url(#shimmerGlow)">
+    <!-- Shimmer particles -->
+    <circle cx="150" cy="300" r="4" fill="#FFD700" opacity="0.8"/>
+    <circle cx="930" cy="450" r="3" fill="#FFA500" opacity="0.7"/>
+    <circle cx="200" cy="800" r="3.5" fill="#FF8C00" opacity="0.6"/>
+    <circle cx="850" cy="1050" r="3" fill="#B8860B" opacity="0.8"/>
+    <circle cx="400" cy="200" r="2.5" fill="#FFD700" opacity="0.9"/>
+    <circle cx="680" cy="350" r="2" fill="#FFA500" opacity="0.7"/>
+    <circle cx="320" cy="950" r="4" fill="#FFD700" opacity="0.6"/>
+    <circle cx="750" cy="180" r="2.5" fill="#FF8C00" opacity="0.8"/>
+    
+    <!-- Floating gold dust trails -->
+    <path d="M100 250 Q200 280 150 350 Q120 400 80 380" 
+          stroke="#FFD700" stroke-width="2" fill="none" opacity="0.4"/>
+    <path d="M980 400 Q880 430 920 500 Q950 550 990 530" 
+          stroke="#FFA500" stroke-width="2" fill="none" opacity="0.3"/>
+    <path d="M300 750 Q400 780 350 850 Q320 900 280 880" 
+          stroke="#FF8C00" stroke-width="2" fill="none" opacity="0.4"/>
+  </g>
+  
+  <!-- Text Overlay for Third Scene -->
+  <g transform="translate(540, 1150)" opacity="0.95">
+    <rect x="-450" y="-50" width="900" height="100" rx="15" 
+          fill="#000000" opacity="0.4"/>
+    <text x="0" y="-15" text-anchor="middle" 
+          font-family="sans-serif" font-size="26" font-weight="500" 
+          fill="#FFD700">"6 to 8 hours of presence.</text>
+    <text x="0" y="15" text-anchor="middle" 
+          font-family="sans-serif" font-size="26" font-weight="600" 
+          fill="#FFA500">Not obnoxious, just…</text>
+    <text x="0" y="45" text-anchor="middle" 
+          font-family="sans-serif" font-size="28" font-weight="700" 
+          fill="#FF8C00">memorable. Like you."</text>
+  </g>
+  
+  <!-- Additional atmospheric elements -->
+  <g opacity="0.6">
+    <!-- Ingredient connection lines -->
+    <path d="M280 420 Q410 450 540 480" 
+          stroke="url(#goldShimmer)" stroke-width="1" fill="none" opacity="0.3"/>
+    <path d="M540 580 Q670 620 800 650" 
+          stroke="url(#goldShimmer)" stroke-width="1" fill="none" opacity="0.3"/>
+    <path d="M280 420 Q600 500 800 650" 
+          stroke="url(#goldShimmer)" stroke-width="1" fill="none" opacity="0.2"/>
+  </g>
+  
+  <!-- Luxury sparkle accents around ingredients -->
+  <g opacity="0.9">
+    <circle cx="200" cy="300" r="1.5" fill="#FFD700"/>
+    <circle cx="360" cy="400" r="1" fill="#FFA500"/>
+    <circle cx="620" cy="480" r="1.2" fill="#FF8C00"/>
+    <circle cx="720" cy="580" r="1" fill="#B8860B"/>
+    <circle cx="880" cy="650" r="1.8" fill="#FFD700"/>
+    <circle cx="460" cy="600" r="1.3" fill="#FFA500"/>
+  </g>
+  
+  <!-- Cinematic vignette -->
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.4" />
+    </radialGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#vignette)"/>
+</svg>

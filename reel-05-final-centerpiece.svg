@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Cinematic background -->
+    <radialGradient id="cinematicBg" cx="50%" cy="45%" r="85%">
+      <stop offset="0%" style="stop-color:#2C2C2C;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#1C1C1C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A0A0A;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Hero bottle gradients -->
+    <radialGradient id="heroBottle" cx="30%" cy="25%" r="70%">
+      <stop offset="0%" style="stop-color:#2a2a2a;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Glowing crest -->
+    <radialGradient id="glowingCrest" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#FFA500;stop-opacity:0.9" />
+      <stop offset="70%" style="stop-color:#FF8C00;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:0.5" />
+    </radialGradient>
+    
+    <radialGradient id="crestGlow" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Crown materials -->
+    <radialGradient id="crownGold" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DAA520;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Dramatic atmosphere -->
+    <radialGradient id="dramaticAtmo" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.3" />
+    </radialGradient>
+    
+    <!-- Hero lighting effects -->
+    <filter id="heroGlow">
+      <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="crestGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Instagram Reel 4:5 cinematic background -->
+  <rect width="1080" height="1350" fill="url(#cinematicBg)"/>
+  <rect width="1080" height="1350" fill="url(#dramaticAtmo)"/>
+  
+  <!-- Dramatic spotlight effect -->
+  <circle cx="540" cy="650" r="450" fill="url(#crestGlow)" opacity="0.6"/>
+  <circle cx="540" cy="650" r="300" fill="url(#crestGlow)" opacity="0.4"/>
+  <circle cx="540" cy="650" r="150" fill="url(#crestGlow)" opacity="0.2"/>
+  
+  <!-- Hero bottle shadow -->
+  <ellipse cx="540" cy="1200" rx="180" ry="40" fill="#000000" opacity="0.8"/>
+  
+  <!-- Hero Obsidian House Bottle -->
+  <g transform="translate(540, 675)" filter="url(#heroGlow)">
+    
+    <!-- Main bottle body -->
+    <path d="M-100 -150 
+             L-100 250 
+             Q-100 270 -80 270 
+             L80 270 
+             Q100 270 100 250 
+             L100 -150 
+             Q100 -170 80 -170 
+             L-80 -170 
+             Q-100 -170 -100 -150 Z" 
+          fill="url(#heroBottle)" 
+          stroke="url(#glowingCrest)" stroke-width="3"/>
+    
+    <!-- Bottle shoulder -->
+    <path d="M-80 -170 
+             L-80 -220 
+             Q-80 -250 -50 -250 
+             L50 -250 
+             Q80 -250 80 -220 
+             L80 -170" 
+          fill="url(#heroBottle)" 
+          stroke="url(#glowingCrest)" stroke-width="3"/>
+    
+    <!-- Elegant neck -->
+    <rect x="-30" y="-330" width="60" height="80" 
+          fill="url(#heroBottle)" 
+          stroke="url(#glowingCrest)" stroke-width="2"/>
+    
+    <!-- Ornate neck ring -->
+    <ellipse cx="0" cy="-335" rx="35" ry="10" 
+             fill="url(#glowingCrest)" 
+             stroke="#B8860B" stroke-width="1"/>
+    
+    <!-- Majestic Crown Cap -->
+    <g transform="translate(0, -360)" filter="url(#crestGlow)">
+      
+      <!-- Crown base platform -->
+      <ellipse cx="0" cy="0" rx="50" ry="15" 
+               fill="url(#crownGold)" 
+               stroke="#B8860B" stroke-width="3"/>
+      
+      <!-- Crown band with royal details -->
+      <rect x="-45" y="-18" width="90" height="25" rx="6" 
+            fill="url(#crownGold)" 
+            stroke="#DAA520" stroke-width="2"/>
+      
+      <!-- Royal heraldic pattern on band -->
+      <g opacity="0.9">
+        <circle cx="-30" cy="-5" r="4" fill="#8B0000"/>
+        <circle cx="0" cy="-5" r="5" fill="#000080"/>
+        <circle cx="30" cy="-5" r="4" fill="#8B0000"/>
+        
+        <!-- Ornate band details -->
+        <path d="M-40 -15 Q-35 -10 -30 -15 M-15 -15 Q-10 -10 -5 -15 M5 -15 Q10 -10 15 -15 M25 -15 Q30 -10 35 -15" 
+              stroke="#B8860B" stroke-width="1.2" fill="none"/>
+      </g>
+      
+      <!-- Crown points - Imperial style -->
+      <g>
+        <!-- Central highest point -->
+        <path d="M0 -18 L-10 -45 Q-6 -55 0 -60 Q6 -55 10 -45 Z" 
+              fill="url(#crownGold)" 
+              stroke="#DAA520" stroke-width="2"/>
+        
+        <!-- Side major points -->
+        <path d="M-25 -18 L-30 -38 Q-27 -43 -25 -46 Q-23 -43 -20 -38 Z" 
+              fill="url(#crownGold)" 
+              stroke="#DAA520" stroke-width="1.5"/>
+        <path d="M25 -18 L30 -38 Q27 -43 25 -46 Q23 -43 20 -38 Z" 
+              fill="url(#crownGold)" 
+              stroke="#DAA520" stroke-width="1.5"/>
+        
+        <!-- Outer lesser points -->
+        <path d="M-42 -18 L-45 -30 Q-43 -33 -42 -35 Q-41 -33 -39 -30 Z" 
+              fill="url(#crownGold)" 
+              stroke="#DAA520" stroke-width="1"/>
+        <path d="M42 -18 L45 -30 Q43 -33 42 -35 Q41 -33 39 -30 Z" 
+              fill="url(#crownGold)" 
+              stroke="#DAA520" stroke-width="1"/>
+        
+        <!-- Cross finials on crown points -->
+        <g transform="translate(0, -55)">
+          <path d="M-3 -4 L3 -4 M0 -7 L0 -1" stroke="#DAA520" stroke-width="2"/>
+        </g>
+        <g transform="translate(-25, -41)">
+          <path d="M-2 -3 L2 -3 M0 -5 L0 -1" stroke="#DAA520" stroke-width="1.5"/>
+        </g>
+        <g transform="translate(25, -41)">
+          <path d="M-2 -3 L2 -3 M0 -5 L0 -1" stroke="#DAA520" stroke-width="1.5"/>
+        </g>
+      </g>
+      
+      <!-- Royal crown jewels -->
+      <g>
+        <!-- Central sapphire -->
+        <circle cx="0" cy="-30" r="5" fill="#000080" opacity="0.9"/>
+        <circle cx="0" cy="-30" r="3" fill="#4169E1" opacity="0.7"/>
+        
+        <!-- Side rubies -->
+        <circle cx="-25" cy="-25" r="4" fill="#8B0000" opacity="0.9"/>
+        <circle cx="25" cy="-25" r="4" fill="#8B0000" opacity="0.9"/>
+        
+        <!-- Minor gems -->
+        <circle cx="-42" cy="-22" r="3" fill="#228B22" opacity="0.8"/>
+        <circle cx="42" cy="-22" r="3" fill="#228B22" opacity="0.8"/>
+        
+        <!-- Pearl accents -->
+        <circle cx="-15" cy="-12" r="2" fill="#F8F8FF" opacity="0.9"/>
+        <circle cx="15" cy="-12" r="2" fill="#F8F8FF" opacity="0.9"/>
+      </g>
+      
+      <!-- Crown interior detail -->
+      <path d="M-30 -12 Q0 -22 30 -12" 
+            stroke="url(#glowingCrest)" stroke-width="1.5" fill="none" opacity="0.7"/>
+            
+      <!-- Ornate base rim -->
+      <ellipse cx="0" cy="10" rx="47" ry="12" 
+               fill="url(#glowingCrest)" opacity="0.8"/>
+    </g>
+    
+    <!-- Glass highlights -->
+    <path d="M-80 -120 Q-60 -140 -40 -120 L-45 200 Q-65 220 -80 200 Z" 
+          fill="url(#glowingCrest)" opacity="0.3"/>
+    
+    <!-- Premium label with glowing family crest -->
+    <rect x="-70" y="-30" width="140" height="160" rx="10" 
+          fill="#0f0f0f" 
+          stroke="url(#glowingCrest)" stroke-width="4" opacity="0.95"/>
+    
+    <rect x="-65" y="-25" width="130" height="150" rx="8" 
+          fill="#1a1a1a" opacity="0.9"/>
+    
+    <!-- Glowing family crest -->
+    <g transform="scale(0.35, 0.35) translate(0, -10)" filter="url(#crestGlow)">
+      <!-- Ornate scrollwork in glowing gold -->
+      <path d="M-70 -50 Q-80 -60 -75 -70 Q-65 -75 -55 -65 L55 -65 Q65 -75 75 -70 Q80 -60 70 -50 L70 50 Q80 60 75 70 Q65 75 55 65 L-55 65 Q-65 75 -75 70 Q-80 60 -70 50 Z" 
+            fill="none" stroke="url(#glowingCrest)" stroke-width="5"/>
+      
+      <!-- Central shield glowing -->
+      <path d="M-45 -45 L45 -45 Q50 -45 50 -40 L50 40 Q50 55 0 65 Q-50 55 -50 40 L-50 -40 Q-50 -45 -45 -45 Z" 
+            fill="#0a0a0a" stroke="url(#glowingCrest)" stroke-width="4"/>
+      
+      <!-- Eagle in glowing gold -->
+      <path d="M0 -30 Q-20 -33 -28 -27 Q-32 -22 -28 -18 Q-20 -15 0 -18 Q20 -15 28 -18 Q32 -22 28 -27 Q20 -33 0 -30 Z" 
+            fill="url(#glowingCrest)"/>
+      
+      <!-- Lion in glowing gold -->
+      <path d="M-20 18 Q-23 15 -20 12 Q-15 9 -10 12 L10 12 Q15 9 20 12 Q23 15 20 18 Q15 21 10 18 L-10 18 Q-15 21 -20 18 Z" 
+            fill="url(#glowingCrest)"/>
+      
+      <!-- Diagonal band -->
+      <path d="M-40 -23 L40 30 Q43 33 40 36 L37 39 Q34 42 31 39 L-40 6 Q-43 3 -40 0 L-37 -3 Q-34 -6 -40 -23 Z" 
+            fill="url(#glowingCrest)" opacity="0.8"/>
+    </g>
+    
+    <!-- Brand text in glowing gold -->
+    <text x="0" y="70" text-anchor="middle" 
+          font-family="serif" font-size="26" font-weight="bold" 
+          fill="url(#glowingCrest)" filter="url(#textGlow)">OBSIDIAN</text>
+    <text x="0" y="100" text-anchor="middle" 
+          font-family="serif" font-size="26" font-weight="bold" 
+          fill="url(#glowingCrest)" filter="url(#textGlow)">HOUSE</text>
+    
+    <!-- Archive designation glowing -->
+    <text x="0" y="125" text-anchor="middle" 
+          font-family="serif" font-size="16" font-weight="normal" 
+          fill="#DAA520" filter="url(#textGlow)">ARCHIVE No.001</text>
+    
+    <!-- Secondary highlights */
+    <path d="M70 -100 Q80 -120 90 -100 L85 180 Q75 200 70 180 Z" 
+          fill="url(#glowingCrest)" opacity="0.2"/>
+  </g>
+  
+  <!-- Text Overlay for Final Scene -->
+  <g transform="translate(540, 1150)" opacity="0.95">
+    <rect x="-500" y="-60" width="1000" height="120" rx="20" 
+          fill="#000000" opacity="0.5"/>
+    <text x="0" y="-20" text-anchor="middle" 
+          font-family="sans-serif" font-size="32" font-weight="600" 
+          fill="#FFD700" filter="url(#textGlow)">Obsidian House.</text>
+    <text x="0" y="15" text-anchor="middle" 
+          font-family="sans-serif" font-size="28" font-weight="500" 
+          fill="#FFA500">Special Reserve No. 1.</text>
+    <text x="0" y="50" text-anchor="middle" 
+          font-family="sans-serif" font-size="24" font-weight="400" 
+          fill="#FF8C00">For the 299 people who get it.</text>
+  </g>
+  
+  <!-- Outro hook text -->
+  <g transform="translate(540, 250)" opacity="0.9">
+    <text x="0" y="0" text-anchor="middle" 
+          font-family="serif" font-size="36" font-weight="300" 
+          fill="#FFD700" filter="url(#textGlow)">✨</text>
+    <text x="0" y="50" text-anchor="middle" 
+          font-family="serif" font-size="28" font-weight="400" 
+          fill="#FFD700" style="font-style: italic;">"Inheritance smells better</text>
+    <text x="0" y="80" text-anchor="middle" 
+          font-family="serif" font-size="28" font-weight="400" 
+          fill="#FFA500" style="font-style: italic;">than purchase."</text>
+    <text x="0" y="130" text-anchor="middle" 
+          font-family="serif" font-size="20" font-weight="600" 
+          fill="#FF8C00">Archive 001 — The Vault Opens Soon</text>
+  </g>
+  
+  <!-- Atmospheric luxury effects -->
+  <g opacity="0.9" filter="url(#heroGlow)">
+    <!-- Floating golden particles -->
+    <circle cx="150" cy="300" r="4" fill="#FFD700"/>
+    <circle cx="930" cy="450" r="3" fill="#FFA500"/>
+    <circle cx="200" cy="900" r="3.5" fill="#FF8C00"/>
+    <circle cx="880" cy="1000" r="3" fill="#B8860B"/>
+    <circle cx="300" cy="200" r="2.5" fill="#FFD700"/>
+    <circle cx="780" cy="350" r="2" fill="#FFA500"/>
+    <circle cx="120" cy="700" r="4" fill="#FFD700"/>
+    <circle cx="960" cy="800" r="2.5" fill="#FF8C00"/>
+    
+    <!-- Elegant floating trails -->
+    <path d="M100 350 Q250 380 200 500 Q150 600 80 580" 
+          stroke="#FFD700" stroke-width="2" fill="none" opacity="0.4"/>
+    <path d="M980 500 Q850 530 900 650 Q950 750 1000 730" 
+          stroke="#FFA500" stroke-width="2" fill="none" opacity="0.3"/>
+  </g>
+  
+  <!-- Final luxury sparkle accents */
+  <g opacity="1" filter="url(#textGlow)">
+    <circle cx="400" cy="450" r="2" fill="#FFD700"/>
+    <circle cx="680" cy="500" r="1.5" fill="#FFA500"/>
+    <circle cx="520" cy="350" r="1.8" fill="#FF8C00"/>
+    <circle cx="600" cy="750" r="1.2" fill="#B8860B"/>
+    <circle cx="460" cy="850" r="2.2" fill="#FFD700"/>
+    <circle cx="620" cy="950" r="1.7" fill="#FFA500"/>
+  </g>
+  
+  <!-- Cinematic vignette -->
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.5" />
+    </radialGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#vignette)"/>
+</svg>

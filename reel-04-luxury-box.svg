@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Cinematic background -->
+    <radialGradient id="cinematicBg" cx="50%" cy="45%" r="85%">
+      <stop offset="0%" style="stop-color:#2C2C2C;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#1C1C1C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A0A0A;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Gold foil gradients -->
+    <linearGradient id="goldFoil" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FF8C00;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#DAA520;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="foilShimmer" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#FFFACD;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Velvet texture -->
+    <radialGradient id="velvetTexture" cx="30%" cy="20%" r="80%">
+      <stop offset="0%" style="stop-color:#2F1B14;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1C0E0A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0F0705;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Box materials -->
+    <linearGradient id="boxExterior" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0f0f0f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Luxury lighting effects -->
+    <filter id="luxuryGlow">
+      <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="goldGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Instagram Reel 4:5 cinematic background -->
+  <rect width="1080" height="1350" fill="url(#cinematicBg)"/>
+  
+  <!-- Dramatic luxury lighting -->
+  <circle cx="540" cy="600" r="400" fill="#FFD700" opacity="0.1"/>
+  <circle cx="300" cy="400" r="200" fill="#FFA500" opacity="0.05"/>
+  <circle cx="800" cy="800" r="180" fill="#FF8C00" opacity="0.06"/>
+  
+  <!-- Luxury table surface -->
+  <ellipse cx="540" cy="1100" rx="500" ry="80" 
+           fill="#1a1a1a" opacity="0.4"/>
+  
+  <!-- Box shadow -->
+  <ellipse cx="540" cy="1050" rx="350" ry="60" 
+           fill="#000000" opacity="0.6"/>
+  
+  <!-- Luxury Gift Box -->
+  <g transform="translate(540, 675)" filter="url(#luxuryGlow)">
+    
+    <!-- Box base -->
+    <rect x="-200" y="100" width="400" height="250" rx="8" 
+          fill="url(#boxExterior)" 
+          stroke="#333333" stroke-width="2"/>
+    
+    <!-- Box lid (opening) -->
+    <g>
+      <!-- Lid back -->
+      <rect x="-200" y="50" width="400" height="60" rx="8" 
+            fill="url(#boxExterior)" 
+            stroke="#333333" stroke-width="2" 
+            transform="rotate(-15)"/>
+      
+      <!-- Lid interior (gold foil) -->
+      <rect x="-195" y="52" width="390" height="56" rx="6" 
+            fill="url(#goldFoil)" 
+            transform="rotate(-15)" 
+            filter="url(#goldGlow)"/>
+      
+      <!-- Gold foil texture details -->
+      <g transform="rotate(-15)" opacity="0.8">
+        <path d="M-180 65 Q-100 70 -20 65 Q60 70 140 65 Q160 75 180 65" 
+              stroke="url(#foilShimmer)" stroke-width="2" fill="none"/>
+        <path d="M-180 85 Q-100 90 -20 85 Q60 90 140 85 Q160 95 180 85" 
+              stroke="url(#foilShimmer)" stroke-width="2" fill="none"/>
+      </g>
+    </g>
+    
+    <!-- Box interior with gold foil lining -->
+    <rect x="-195" y="105" width="390" height="240" rx="6" 
+          fill="url(#goldFoil)" opacity="0.9"/>
+    
+    <!-- Gold foil shimmer patterns -->
+    <g opacity="0.7">
+      <path d="M-180 130 Q-60 140 60 130 Q180 140 190 130" 
+            stroke="url(#foilShimmer)" stroke-width="3" fill="none"/>
+      <path d="M-180 160 Q-60 170 60 160 Q180 170 190 160" 
+            stroke="url(#foilShimmer)" stroke-width="2" fill="none"/>
+      <path d="M-180 190 Q-60 200 60 190 Q180 200 190 190" 
+            stroke="url(#foilShimmer)" stroke-width="2" fill="none"/>
+    </g>
+    
+    <!-- Velvet pouch emerging from box -->
+    <g transform="translate(0, 180)">
+      <!-- Velvet pouch body -->
+      <path d="M-80 -20 
+               Q-90 -30 -85 -40 
+               L85 -35 
+               Q95 -25 90 -15 
+               L85 60 
+               Q80 80 60 85 
+               L-60 80 
+               Q-85 75 -85 55 Z" 
+            fill="url(#velvetTexture)" 
+            stroke="#2F1B14" stroke-width="2"/>
+      
+      <!-- Velvet texture details -->
+      <g opacity="0.6">
+        <path d="M-70 -10 Q-35 0 0 -5 Q35 0 70 -10" 
+              stroke="#4A2C20" stroke-width="1" fill="none"/>
+        <path d="M-70 10 Q-35 20 0 15 Q35 20 70 10" 
+              stroke="#4A2C20" stroke-width="1" fill="none"/>
+        <path d="M-70 30 Q-35 40 0 35 Q35 40 70 30" 
+              stroke="#4A2C20" stroke-width="1" fill="none"/>
+      </g>
+      
+      <!-- Velvet pouch drawstring -->
+      <ellipse cx="0" cy="-25" rx="70" ry="8" 
+               fill="#8B4513" stroke="#654321" stroke-width="1"/>
+      
+      <!-- Drawstring details -->
+      <g>
+        <circle cx="-25" cy="-25" r="3" fill="#654321"/>
+        <circle cx="25" cy="-25" r="3" fill="#654321"/>
+        <path d="M-25 -22 Q0 -18 25 -22" 
+              stroke="#8B4513" stroke-width="2" fill="none"/>
+      </g>
+      
+      <!-- Gold tassel on drawstring -->
+      <g transform="translate(0, -35)">
+        <ellipse cx="0" cy="0" rx="8" ry="4" fill="url(#goldFoil)"/>
+        <path d="M-3 4 L-3 12 M0 4 L0 14 M3 4 L3 12" 
+              stroke="url(#goldFoil)" stroke-width="1"/>
+      </g>
+    </g>
+    
+    <!-- Authentication card sliding into frame -->
+    <g transform="translate(120, 200)">
+      <!-- Authentication card -->
+      <rect x="0" y="0" width="150" height="100" rx="6" 
+            fill="#f8f6f0" 
+            stroke="url(#goldFoil)" stroke-width="2"/>
+      
+      <!-- Card content -->
+      <g transform="translate(75, 30)">
+        <!-- Mini crest on card -->
+        <g transform="scale(0.08, 0.08)">
+          <path d="M-60 -40 Q-70 -50 -65 -60 Q-55 -65 -45 -55 L45 -55 Q55 -65 65 -60 Q70 -50 60 -40 L60 40 Q70 50 65 60 Q55 65 45 55 L-45 55 Q-55 65 -65 60 Q-70 50 -60 40 Z" 
+                fill="none" stroke="#1a1a1a" stroke-width="4"/>
+          <path d="M-40 -35 L40 -35 Q45 -35 45 -30 L45 30 Q45 45 0 55 Q-45 45 -45 30 L-45 -30 Q-45 -35 -40 -35 Z" 
+                fill="#1a1a1a" stroke="url(#goldFoil)" stroke-width="3"/>
+        </g>
+        
+        <!-- Authentication text -->
+        <text x="0" y="25" text-anchor="middle" 
+              font-family="serif" font-size="8" font-weight="600" 
+              fill="#1a1a1a">CERTIFICATE</text>
+        <text x="0" y="35" text-anchor="middle" 
+              font-family="serif" font-size="6" font-weight="400" 
+              fill="#666666">OF AUTHENTICITY</text>
+        <text x="0" y="50" text-anchor="middle" 
+              font-family="serif" font-size="10" font-weight="700" 
+              fill="url(#goldFoil)">001/299</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Text Overlay for Fourth Scene -->
+  <g transform="translate(540, 1150)" opacity="0.95">
+    <rect x="-450" y="-50" width="900" height="100" rx="15" 
+          fill="#000000" opacity="0.4"/>
+    <text x="0" y="-15" text-anchor="middle" 
+          font-family="sans-serif" font-size="26" font-weight="500" 
+          fill="#FFD700">"Because exclusivity</text>
+    <text x="0" y="15" text-anchor="middle" 
+          font-family="sans-serif" font-size="28" font-weight="700" 
+          fill="#FFA500">deserves receipts."</text>
+  </g>
+  
+  <!-- Luxury atmosphere effects -->
+  <g opacity="0.8">
+    <!-- Gold dust particles floating -->
+    <circle cx="200" cy="300" r="3" fill="#FFD700" opacity="0.8"/>
+    <circle cx="880" cy="450" r="2" fill="#FFA500" opacity="0.7"/>
+    <circle cx="150" cy="800" r="2.5" fill="#FF8C00" opacity="0.6"/>
+    <circle cx="930" cy="950" r="2" fill="#B8860B" opacity="0.8"/>
+    <circle cx="350" cy="200" r="1.5" fill="#FFD700" opacity="0.9"/>
+    <circle cx="750" cy="350" r="2" fill="#FFA500" opacity="0.7"/>
+    <circle cx="100" cy="1000" r="3" fill="#FFD700" opacity="0.6"/>
+    <circle cx="980" cy="180" r="1.5" fill="#FF8C00" opacity="0.8"/>
+    
+    <!-- Floating luxury elements -->
+    <path d="M120 400 Q220 420 180 500 Q140 560 100 540" 
+          stroke="#FFD700" stroke-width="1" fill="none" opacity="0.3"/>
+    <path d="M960 600 Q860 620 900 700 Q940 760 980 740" 
+          stroke="#FFA500" stroke-width="1" fill="none" opacity="0.3"/>
+  </g>
+  
+  <!-- Premium sparkle accents -->
+  <g opacity="0.9" filter="url(#goldGlow)">
+    <circle cx="400" cy="500" r="1.5" fill="#FFD700"/>
+    <circle cx="680" cy="550" r="1" fill="#FFA500"/>
+    <circle cx="520" cy="400" r="1.2" fill="#FF8C00"/>
+    <circle cx="600" cy="650" r="1" fill="#B8860B"/>
+    <circle cx="460" cy="750" r="1.8" fill="#FFD700"/>
+    <circle cx="620" cy="800" r="1.3" fill="#FFA500"/>
+  </g>
+  
+  <!-- Box opening light rays -->
+  <g opacity="0.4">
+    <path d="M540 550 L300 200" stroke="#FFD700" stroke-width="2" opacity="0.3"/>
+    <path d="M540 550 L540 150" stroke="#FFA500" stroke-width="3" opacity="0.4"/>
+    <path d="M540 550 L780 200" stroke="#FF8C00" stroke-width="2" opacity="0.3"/>
+    <path d="M540 550 L200 400" stroke="#FFD700" stroke-width="1.5" opacity="0.2"/>
+    <path d="M540 550 L880 400" stroke="#FFA500" stroke-width="1.5" opacity="0.2"/>
+  </g>
+  
+  <!-- Cinematic vignette -->
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.4" />
+    </radialGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#vignette)"/>
+</svg>
