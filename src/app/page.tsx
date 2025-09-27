@@ -29,7 +29,7 @@ export default function Home() {
             <p className="text-lg text-yellow-500 font-medium mb-12">For Those Who Know</p>
             
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-300 font-light">
-              The fragrance that billionaires' sons wear to prep school. Not sold in stores. 
+              The fragrance that billionaires&apos; sons wear to prep school. Not sold in stores.
               Not advertised anywhere. Only available through whispers.
             </p>
             

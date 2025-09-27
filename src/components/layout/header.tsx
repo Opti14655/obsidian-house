@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { Search, ShoppingCart, User, Menu, X } from 'lucide-react'
+import { ShoppingCart, Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export function Header() {
