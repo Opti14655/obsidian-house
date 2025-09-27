@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
       amount: Math.round(amount * 100), // Stripe expects amount in cents
       currency: 'usd',
       metadata: {
-        product: 'Creed Aventus 100ml',
+        product: 'ARCHIVE No.001 100ml',
         quantity: quantity.toString(),
         customer_email: shippingInfo.email,
         customer_name: `${shippingInfo.firstName} ${shippingInfo.lastName}`,

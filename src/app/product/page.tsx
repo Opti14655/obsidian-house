@@ -46,7 +46,7 @@ export default function ProductPage() {
                 ARCHIVE No.001
               </h1>
               <p className="mt-4 text-lg font-light text-slate-600 leading-relaxed">
-                Our inaugural fragrance - a masterfully crafted Aventus-inspired blend that embodies luxury and exclusivity. 
+                Our inaugural fragrance - a masterfully crafted Archive-inspired blend that embodies luxury and exclusivity.
                 Opening with vibrant mango, bergamot, and blackcurrant, transitioning to smoky birch and jasmine,
                 before settling into an elegant base of musk, oakmoss, and ambergris.
               </p>

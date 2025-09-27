@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Obsidian House - Luxury Creed Aventus | Premium Fragrances",
-  description: "Exclusive collection of authentic Creed Aventus 100ml bottles. The legendary masculine fragrance that embodies strength and success. Limited availability.",
-  keywords: "creed aventus, luxury fragrance, premium cologne, niche perfume, authentic creed, obsidian house",
+  title: "Obsidian House - Luxury ARCHIVE No.001 | Premium Fragrances",
+  description: "Exclusive collection of authentic ARCHIVE No.001 100ml bottles. The legendary masculine fragrance that embodies strength and success. Limited availability.",
+  keywords: "archive no.001, luxury fragrance, premium cologne, niche perfume, obsidian house, exclusive scent",
 }
 
 export default function RootLayout({

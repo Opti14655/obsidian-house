@@ -22,7 +22,7 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex md:space-x-8">
             <Link href="/product" className="text-slate-700 hover:text-slate-900 font-light tracking-wide">
-              Aventus
+              Archive
             </Link>
             <Link href="/about" className="text-slate-700 hover:text-slate-900 font-light tracking-wide">
               Heritage
@@ -69,7 +69,7 @@ export function Header() {
                   className="text-slate-700 hover:text-slate-900 py-2 font-light tracking-wide"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Aventus
+                  Archive
                 </Link>
                 <Link 
                   href="/about" 

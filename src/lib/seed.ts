@@ -3,7 +3,7 @@ import { prisma } from './prisma'
 const sampleProducts = [
   {
     name: "ARCHIVE No.001",
-    description: "Our inaugural fragrance - a masterfully crafted Aventus-inspired blend that embodies the essence of luxury and exclusivity. Opening with vibrant mango, bergamot, and blackcurrant, transitioning to a heart of birch, patchouli, and jasmine, before settling into a rich base of musk, oakmoss, ambergris, and vanilla. Presented in a crystal glass bottle with premium black rigid packaging and gold foil interior. Each bottle includes authentication card and protective velvet pouch. 6-8 hour longevity with moderate to strong projection.",
+    description: "Our inaugural fragrance - a masterfully crafted Archive-inspired blend that embodies the essence of luxury and exclusivity. Opening with vibrant mango, bergamot, and blackcurrant, transitioning to a heart of birch, patchouli, and jasmine, before settling into a rich base of musk, oakmoss, ambergris, and vanilla. Presented in a crystal glass bottle with premium black rigid packaging and gold foil interior. Each bottle includes authentication card and protective velvet pouch. 6-8 hour longevity with moderate to strong projection.",
     price: 160.00,
     brand: "Obsidian House",
     category: "men",
