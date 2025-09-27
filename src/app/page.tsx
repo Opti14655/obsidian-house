@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { formatPrice } from '@/lib/utils'
-import { Lock, Eye, Crown, Zap } from 'lucide-react'
+import { Lock, Eye, Zap } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -39,20 +39,20 @@ export default function Home() {
               <p className="text-gray-300 mb-6 font-light">Fresh pineapple meets smoky birch. Elegant musk wraps it all together.</p>
               
               <div className="flex items-center justify-center space-x-8 mb-6">
-                <div className="text-center">
-                  <div className="text-3xl font-light text-white">{formatPrice(95)}</div>
-                  <div className="text-sm text-gray-400">Vault Member Pricing</div>
-                </div>
-                <div className="h-12 w-px bg-gray-700"></div>
-                <div className="text-center">
-                  <div className="text-3xl font-light text-yellow-400">487</div>
-                  <div className="text-sm text-gray-400">of 500 remaining</div>
-                </div>
+              <div className="text-center">
+                <div className="text-3xl font-light text-white">{formatPrice(160)}</div>
+                <div className="text-sm text-gray-400">Per Bottle</div>
+              </div>
+              <div className="h-12 w-px bg-gray-700"></div>
+              <div className="text-center">
+                <div className="text-3xl font-light text-yellow-400">9</div>
+                <div className="text-sm text-gray-400">Available</div>
+              </div>
               </div>
               
               {/* Progress Bar */}
               <div className="w-full bg-gray-800 rounded-full h-2 mb-6">
-                <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 h-2 rounded-full transition-all duration-500" style={{width: '97.4%'}}></div>
+                <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 h-2 rounded-full transition-all duration-500" style={{width: '10%'}}></div>
               </div>
             </div>
             

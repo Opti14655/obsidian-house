@@ -40,10 +40,11 @@ export async function POST(request: NextRequest) {
       clientSecret: paymentIntent.client_secret,
       paymentIntentId: paymentIntent.id,
     })
-  } catch (err: any) {
-    console.error('Error creating payment intent:', err)
+  } catch (err: unknown) {
+    const error = err as Error
+    console.error('Error creating payment intent:', error)
     return NextResponse.json(
-      { error: err.message || 'Internal server error' },
+      { error: error.message || 'Internal server error' },
       { status: 500 }
     )
   }
