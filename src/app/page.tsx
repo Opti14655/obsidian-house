@@ -15,7 +15,7 @@ export default function Home() {
           <div className="text-center">
             {/* Exclusive Badge */}
             <div className="mb-8 flex justify-center">
-              <Badge className="bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 text-sm font-semibold">
+              <Badge className="bg-gradient-to-r from-green-700 to-green-800 text-white px-4 py-2 text-sm font-semibold">
                 <Lock className="w-3 h-3 mr-2" />
                 COMING SOON
               </Badge>
@@ -41,7 +41,7 @@ export default function Home() {
             {/* Product Focus - MANUSCRIPT 001 */}
             <div className="mt-16 mb-12 bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-lg p-8 max-w-4xl mx-auto">
               <div className="mb-4 flex justify-center">
-                <Badge className="bg-gradient-to-r from-red-500 to-red-600 text-white px-3 py-1 text-xs font-semibold">
+                <Badge className="bg-gradient-to-r from-green-700 to-green-800 text-white px-3 py-1 text-xs font-semibold">
                   COMING SOON
                 </Badge>
               </div>
