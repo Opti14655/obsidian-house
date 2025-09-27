@@ -1,5 +1,6 @@
 import { Shield } from 'lucide-react'
 
+// Heritage page - Brand story and founding principles
 export default function HeritagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white">
