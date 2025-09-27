@@ -79,7 +79,7 @@ export default function Home() {
             <h2 className="text-3xl font-light text-white tracking-wide mb-4">
               Why The Elite Choose Obsidian House
             </h2>
-            <p className="text-gray-400 font-light">Exclusivity isn't about price. It's about access.</p>
+            <p className="text-gray-400 font-light">Exclusivity is not about price. It is about access.</p>
           </div>
 
           <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
@@ -135,17 +135,17 @@ export default function Home() {
               <div>
                 <h3 className="text-lg font-medium text-yellow-400 mb-3">Opening</h3>
                 <p className="text-gray-300 font-light">Fresh Pineapple, Bergamot, Blackcurrant</p>
-                <p className="text-gray-500 text-sm mt-2">Confident & Sophisticated</p>
+                <p className="text-gray-500 text-sm mt-2">Confident and Sophisticated</p>
               </div>
               <div>
                 <h3 className="text-lg font-medium text-yellow-400 mb-3">Heart</h3>
                 <p className="text-gray-300 font-light">Smoky Birch, Patchouli, Jasmine</p>
-                <p className="text-gray-500 text-sm mt-2">Mysterious & Alluring</p>
+                <p className="text-gray-500 text-sm mt-2">Mysterious and Alluring</p>
               </div>
               <div>
                 <h3 className="text-lg font-medium text-yellow-400 mb-3">Dry Down</h3>
                 <p className="text-gray-300 font-light">Elegant Musk, Oakmoss, Ambergris</p>
-                <p className="text-gray-500 text-sm mt-2">Lasting & Memorable</p>
+                <p className="text-gray-500 text-sm mt-2">Lasting and Memorable</p>
               </div>
             </div>
           </div>
@@ -176,9 +176,9 @@ export default function Home() {
       <section id="vault-access" className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-light text-white mb-4">Request Vault Access</h2>
-          <p className="text-gray-400 font-light mb-8">
-            Join the exclusive circle of 500. Once they're gone, they're gone forever.
-          </p>
+            <p className="text-gray-400 font-light mb-8">
+              Join the exclusive circle of 500. Once they are gone, they are gone forever.
+            </p>
           
           <div className="bg-black border border-gray-800 rounded-lg p-8">
             <div className="mb-6">
