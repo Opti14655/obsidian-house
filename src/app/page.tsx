@@ -14,9 +14,9 @@ export default function Home() {
           <div className="text-center">
             {/* Exclusive Badge */}
             <div className="mb-8 flex justify-center">
-              <Badge className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-4 py-2 text-sm font-semibold">
+              <Badge className="bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 text-sm font-semibold">
                 <Lock className="w-3 h-3 mr-2" />
-                VAULT ACCESS REQUIRED
+                COMING SOON
               </Badge>
             </div>
             
@@ -26,40 +26,46 @@ export default function Home() {
             </h1>
             
             <p className="text-xl text-gray-400 font-light mb-2">Ultra-Niche Fragrance House</p>
-            <p className="text-lg text-yellow-500 font-medium mb-12">For Those Who Know</p>
+            <p className="text-lg text-yellow-500 font-medium mb-12">Launching Soon - For Those Who Know</p>
             
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-300 font-light">
-              The fragrance that billionaires&apos; sons wear to prep school. Not sold in stores.
-              Not advertised anywhere. Only available through whispers.
+              The fragrance that billionaires&apos; sons will wear to prep school. Not sold in stores.
+              Not advertised anywhere. Launching soon for those who know where to look.
             </p>
             
             {/* Product Focus - MANUSCRIPT 001 */}
             <div className="mt-16 mb-12 bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-lg p-8 max-w-2xl mx-auto">
+              <div className="mb-4 flex justify-center">
+                <Badge className="bg-gradient-to-r from-red-500 to-red-600 text-white px-3 py-1 text-xs font-semibold">
+                  COMING SOON
+                </Badge>
+              </div>
               <h2 className="text-3xl font-light text-yellow-400 mb-4">ARCHIVE No.001</h2>
               <p className="text-gray-300 mb-6 font-light">Fresh pineapple meets smoky birch. Elegant musk wraps it all together.</p>
               
               <div className="flex items-center justify-center space-x-8 mb-6">
               <div className="text-center">
                 <div className="text-3xl font-light text-white">{formatPrice(160)}</div>
-                <div className="text-sm text-gray-400">Per Bottle</div>
+                <div className="text-sm text-gray-400">Launch Price</div>
               </div>
               <div className="h-12 w-px bg-gray-700"></div>
               <div className="text-center">
-                <div className="text-3xl font-light text-yellow-400">9</div>
-                <div className="text-sm text-gray-400">Available</div>
+                <div className="text-3xl font-light text-yellow-400">300</div>
+                <div className="text-sm text-gray-400">Limited Edition</div>
               </div>
               </div>
               
-              {/* Progress Bar */}
+              {/* Progress Bar - Full since it's coming soon */}
               <div className="w-full bg-gray-800 rounded-full h-2 mb-6">
-                <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 h-2 rounded-full transition-all duration-500" style={{width: '10%'}}></div>
+                <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 h-2 rounded-full transition-all duration-500" style={{width: '100%'}}></div>
               </div>
+              <p className="text-center text-sm text-gray-400">Launching Soon - Full Limited Run of 300 Bottles</p>
             </div>
             
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link href="#vault-access">
                 <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black hover:from-yellow-400 hover:to-yellow-500 font-semibold px-8">
-                  Request Vault Access
+                  Get Early Access
                 </Button>
               </Link>
               <Link href="#archive">
@@ -89,7 +95,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-light text-white mb-3">Ultra Exclusive</h3>
               <p className="text-gray-400 font-light leading-relaxed">
-                Only 500 bottles exist globally. When everyone wears the same designer scents, how do you stand out?
+                Only 300 bottles in our first limited release. When everyone wears the same designer scents, how do you stand out?
               </p>
             </div>
 
@@ -151,7 +157,7 @@ export default function Home() {
           </div>
           
           {/* Performance Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
               <div className="text-2xl font-light text-white mb-1">8+ hrs</div>
               <div className="text-gray-400 text-sm">Longevity</div>
@@ -159,10 +165,6 @@ export default function Home() {
             <div>
               <div className="text-2xl font-light text-white mb-1">Moderate</div>
               <div className="text-gray-400 text-sm">Projection</div>
-            </div>
-            <div>
-              <div className="text-2xl font-light text-white mb-1">16-30</div>
-              <div className="text-gray-400 text-sm">Age Range</div>
             </div>
             <div>
               <div className="text-2xl font-light text-white mb-1">All Season</div>
@@ -175,9 +177,9 @@ export default function Home() {
       {/* Vault Access Section */}
       <section id="vault-access" className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-light text-white mb-4">Request Vault Access</h2>
+          <h2 className="text-3xl font-light text-white mb-4">Get Early Access</h2>
             <p className="text-gray-400 font-light mb-8">
-              Join the exclusive circle of 500. Once they are gone, they are gone forever.
+              Join the exclusive circle of 300. First release launches soon - once they are gone, they are gone forever.
             </p>
           
           <div className="bg-black border border-gray-800 rounded-lg p-8">
@@ -189,7 +191,7 @@ export default function Home() {
               />
             </div>
             <Button className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-black hover:from-yellow-400 hover:to-yellow-500 font-semibold py-3">
-              Request Access to ARCHIVE No.001
+              Get Early Access to ARCHIVE No.001
             </Button>
             <p className="text-gray-500 text-xs mt-4">*Independent retailer. Limited quantities available.</p>
           </div>
