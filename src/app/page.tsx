@@ -35,7 +35,7 @@ export default function Home() {
             
             {/* Product Focus - MANUSCRIPT 001 */}
             <div className="mt-16 mb-12 bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-lg p-8 max-w-2xl mx-auto">
-              <h2 className="text-3xl font-light text-yellow-400 mb-4">MANUSCRIPT 001</h2>
+              <h2 className="text-3xl font-light text-yellow-400 mb-4">ARCHIVE No.001</h2>
               <p className="text-gray-300 mb-6 font-light">Fresh pineapple meets smoky birch. Elegant musk wraps it all together.</p>
               
               <div className="flex items-center justify-center space-x-8 mb-6">
@@ -62,7 +62,7 @@ export default function Home() {
                   Request Vault Access
                 </Button>
               </Link>
-              <Link href="#manuscript">
+              <Link href="#archive">
                 <Button variant="outline" size="lg" className="border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black font-medium">
                   Learn More
                 </Button>
@@ -116,12 +116,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* MANUSCRIPT 001 Profile */}
-      <section id="manuscript" className="py-20 bg-gray-900">
+      {/* ARCHIVE No.001 Profile */}
+      <section id="archive" className="py-20 bg-gray-900">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-light text-white tracking-wide mb-4">
-              MANUSCRIPT 001
+              ARCHIVE No.001
             </h2>
             <p className="text-yellow-400 text-lg font-medium mb-2">The Signature Scent</p>
             <p className="text-gray-400 font-light max-w-2xl mx-auto">
@@ -189,7 +189,7 @@ export default function Home() {
               />
             </div>
             <Button className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-black hover:from-yellow-400 hover:to-yellow-500 font-semibold py-3">
-              Request Access to MANUSCRIPT 001
+              Request Access to ARCHIVE No.001
             </Button>
             <p className="text-gray-500 text-xs mt-4">*Independent retailer. Limited quantities available.</p>
           </div>

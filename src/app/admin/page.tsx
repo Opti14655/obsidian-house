@@ -11,7 +11,7 @@ const mockOrders = [
     id: 'ord_1',
     customerName: 'John Smith',
     email: 'john@example.com',
-    product: 'MANUSCRIPT 001 - 100ml',
+    product: 'ARCHIVE No.001 - 100ml',
     quantity: 1,
     total: 187.80,
     status: 'paid',
@@ -28,7 +28,7 @@ const mockOrders = [
     id: 'ord_2',
     customerName: 'Sarah Johnson',
     email: 'sarah@example.com',
-    product: 'MANUSCRIPT 001 - 100ml',
+    product: 'ARCHIVE No.001 - 100ml',
     quantity: 2,
     total: 359.60,
     status: 'shipped',
@@ -82,7 +82,7 @@ export default function AdminPage() {
             Admin Dashboard
           </h1>
           <p className="text-slate-600 font-light">
-            Manage your MANUSCRIPT 001 inventory and orders
+            Manage your ARCHIVE No.001 inventory and orders
           </p>
         </div>
 

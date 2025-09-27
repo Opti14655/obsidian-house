@@ -43,7 +43,7 @@ export default function ProductPage() {
                 <span className="text-sm font-light text-slate-500 tracking-widest uppercase">Obsidian House</span>
               </div>
               <h1 className="text-4xl font-light text-slate-900 tracking-wide">
-                MANUSCRIPT 001
+                ARCHIVE No.001
               </h1>
               <p className="mt-4 text-lg font-light text-slate-600 leading-relaxed">
                 Our inaugural fragrance - a masterfully crafted Aventus-inspired blend that embodies luxury and exclusivity. 

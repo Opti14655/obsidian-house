@@ -79,7 +79,7 @@ export default function CheckoutPage() {
             Checkout
           </h1>
           <p className="mt-4 text-slate-600 font-light">
-            Complete your purchase of MANUSCRIPT 001
+            Complete your purchase of ARCHIVE No.001
           </p>
         </div>
 
@@ -297,7 +297,7 @@ export default function CheckoutPage() {
                           <Package className="h-8 w-8 text-slate-400" />
                         </div>
                         <div>
-                          <h3 className="font-medium text-slate-900">MANUSCRIPT 001</h3>
+                          <h3 className="font-medium text-slate-900">ARCHIVE No.001</h3>
                           <p className="text-sm text-slate-600">100ml - Obsidian House</p>
                         </div>
                       </div>
