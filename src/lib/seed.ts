@@ -8,7 +8,7 @@ const sampleProducts = [
     brand: "Obsidian House",
     category: "men",
     size: "100ml",
-    stockCount: 9,
+    stockCount: 300,
     images: ["/images/manuscript-001.jpg"],
     featured: true
   }

@@ -7,7 +7,7 @@ import { ShoppingCart, Crown, Package, Shield, Truck } from 'lucide-react'
 
 export default function ProductPage() {
   const [quantity, setQuantity] = useState(1)
-  const [stockCount] = useState(9)
+  const [stockCount] = useState(300)
 
   const handleAddToCart = () => {
     // This will be connected to cart context later

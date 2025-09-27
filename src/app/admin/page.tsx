@@ -46,7 +46,7 @@ const mockOrders = [
 
 export default function AdminPage() {
   const [orders, setOrders] = useState(mockOrders)
-  const [stockCount, setStockCount] = useState(9)
+  const [stockCount, setStockCount] = useState(300)
 
   const getStatusIcon = (status: string) => {
     switch (status) {
