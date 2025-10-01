@@ -2,10 +2,29 @@ import { NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
 import { generateDiscountCode } from '@/lib/utils';
 
-const prisma = new PrismaClient();
+// Check if we have a database URL before initializing Prisma
+let prisma: PrismaClient | null = null;
+try {
+  if (process.env.DATABASE_URL) {
+    prisma = new PrismaClient();
+  }
+} catch (error) {
+  console.warn('Database not available:', error);
+}
 
 export async function POST(request: Request) {
   try {
+    // If no database is available, return a fallback response
+    if (!prisma) {
+      return NextResponse.json(
+        { 
+          error: 'System is being updated. Please try again in a few moments.',
+          fallback: true
+        }, 
+        { status: 503 }
+      );
+    }
+
     const body = await request.json();
     const { email, firstName, lastName, phone, city, state } = body;
 
@@ -76,6 +95,16 @@ export async function POST(request: Request) {
 
 export async function GET() {
   try {
+    // If no database is available, return fallback status
+    if (!prisma) {
+      return NextResponse.json({
+        totalSignups: 0,
+        discountSpotsLeft: 50,
+        discountActive: true,
+        fallback: true
+      });
+    }
+
     const totalCount = await prisma.waitlist.count();
     const discountSpotsLeft = Math.max(0, 50 - totalCount);
     
