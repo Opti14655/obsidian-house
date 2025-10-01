@@ -118,6 +118,20 @@ enum Role {
   ADMIN
 }
 
+model Waitlist {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  discountCode String   @unique
+  discountPercent Int   @default(20) // 20% off for first 50
+  used         Boolean  @default(false)
+  usedAt       DateTime?
+  metadata     Json?    // Store customer info like firstName, lastName, phone, etc.
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("waitlist")
+}
+
 enum OrderStatus {
   PENDING
   PROCESSING

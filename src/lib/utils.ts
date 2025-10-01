@@ -30,3 +30,9 @@ export function slugify(text: string): string {
     .replace(/[^\w ]+/g, '')
     .replace(/ +/g, '-')
 }
+
+export function generateDiscountCode(): string {
+  const prefix = 'OBSIDIAN';
+  const randomSuffix = Math.random().toString(36).substring(2, 8).toUpperCase();
+  return `${prefix}${randomSuffix}`;
+}

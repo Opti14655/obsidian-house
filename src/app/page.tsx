@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { formatPrice } from '@/lib/utils'
 import { Lock, Zap, Shield, Crown } from 'lucide-react'
+import { DiscountStatus } from '@/components/discount-status'
+import { PreOrderForm } from '@/components/preorder-form'
 
 export default function Home() {
   return (
@@ -31,7 +33,10 @@ export default function Home() {
             </h1>
             
             <p className="text-xl text-gray-400 font-light mb-2">Ultra-Niche Fragrance House</p>
-            <p className="text-lg text-yellow-500 font-medium mb-12">Launching Soon - For Those Who Know</p>
+            <p className="text-lg text-yellow-500 font-medium mb-6">Launching Soon - For Those Who Know</p>
+            
+            {/* Early Bird Discount Status */}
+            <DiscountStatus className="mb-12" />
             
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-300 font-light">
               The fragrance that billionaires&apos; sons will wear to prep school. Not sold in stores.
@@ -51,13 +56,13 @@ export default function Home() {
                 <div className="flex justify-center">
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 rounded-lg blur-xl transform rotate-3"></div>
-                    <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-lg border border-gray-700">
-                      <div className="w-48 h-64 mx-auto relative">
+                    <div className="relative bg-gradient-to-br from-gray-100 to-white rounded-lg overflow-hidden">
+                      <div className="w-64 h-80 mx-auto relative">
                         <Image
-                          src="/images/archive-001-bottle.svg"
+                          src="/images/hero-bottle.jpg"
                           alt="ARCHIVE No.001 - Luxury Fragrance Bottle"
                           fill
-                          className="object-contain"
+                          className="object-contain rounded-lg"
                           priority
                         />
                       </div>
@@ -95,14 +100,14 @@ export default function Home() {
             </div>
             
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Link href="#vault-access">
+              <Link href="#pre-order">
                 <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black hover:from-yellow-400 hover:to-yellow-500 font-semibold px-8">
-                  Get Early Access
+                  Pre-Order Now
                 </Button>
               </Link>
-              <Link href="#archive">
+              <Link href="#contact">
                 <Button variant="outline" size="lg" className="border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black font-medium">
-                  Learn More
+                  Contact Us
                 </Button>
               </Link>
             </div>
@@ -206,27 +211,78 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Vault Access Section */}
-      <section id="vault-access" className="py-20 bg-gradient-to-b from-gray-900 to-black">
+      {/* Pre-Order Section */}
+      <section id="pre-order" className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-light text-white mb-4">Get Early Access</h2>
-            <p className="text-gray-400 font-light mb-8">
-              Join the exclusive circle of 300. First release launches soon - once they are gone, they are gone forever.
+          <h2 className="text-3xl font-light text-white mb-4">Pre-Order ARCHIVE No.001</h2>
+            <p className="text-gray-400 font-light mb-2">
+              Secure your bottle from the exclusive limited run of 300.
             </p>
+            <p className="text-yellow-500 font-medium mb-4">
+              Launch Price: $160 • No payment required now
+            </p>
+            
+            {/* Discount Status for Pre-order Section */}
+            <DiscountStatus className="mb-8" />
           
-          <div className="bg-black border border-gray-800 rounded-lg p-8">
-            <div className="mb-6">
+          <PreOrderForm />
+        </div>
+      </section>
+      
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-black">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-light text-white mb-4">Contact Us</h2>
+          <p className="text-gray-400 font-light mb-8">
+            Questions about ARCHIVE No.001? Get in touch with our team.
+          </p>
+          
+          <form action="https://formsubmit.co/marcusdurlach5@icloud.com" method="POST" className="bg-gray-900 border border-gray-800 rounded-lg p-8">
+            <input type="hidden" name="_subject" value="Contact Form - Obsidian House" />
+            <input type="hidden" name="_next" value="https://cologne-store-b44i0fvar-marcus-projects-d5696120.vercel.app?success=contact" />
+            <input type="hidden" name="_captcha" value="false" />
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <input 
+                type="text" 
+                name="contact_name"
+                placeholder="Your Name" 
+                className="bg-black border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500"
+                required
+              />
               <input 
                 type="email" 
-                placeholder="Enter your email for exclusive access" 
-                className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500"
+                name="contact_email"
+                placeholder="Your Email" 
+                className="bg-black border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500"
+                required
               />
             </div>
-            <Button className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-black hover:from-yellow-400 hover:to-yellow-500 font-semibold py-3">
-              Get Early Access to ARCHIVE No.001
+            
+            <div className="mb-4">
+              <input 
+                type="text" 
+                name="subject"
+                placeholder="Subject" 
+                className="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500"
+                required
+              />
+            </div>
+            
+            <div className="mb-6">
+              <textarea 
+                name="message"
+                placeholder="Your Message" 
+                rows={4}
+                className="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 resize-none"
+                required
+              ></textarea>
+            </div>
+            
+            <Button type="submit" className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-black hover:from-yellow-400 hover:to-yellow-500 font-semibold py-3">
+              Send Message
             </Button>
-            <p className="text-gray-500 text-xs mt-4">*Independent retailer. Limited quantities available.</p>
-          </div>
+          </form>
         </div>
       </section>
     </div>
