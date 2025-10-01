@@ -1,4 +1,5 @@
 import { Shield } from 'lucide-react'
+import Image from 'next/image'
 
 // Heritage page - Brand story and founding principles
 export default function HeritagePage() {
@@ -22,6 +23,14 @@ export default function HeritagePage() {
                 <span className="font-extralight text-gray-300">OBSIDIAN</span>
                 <span className="block font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">HOUSE</span>
               </div>
+            </div>
+          </div>
+
+          {/* Heritage Section */}
+          <div className="mb-16">
+            <div className="bg-gradient-to-r from-gray-900 to-black border border-gray-700 rounded-lg p-8 text-center">
+              <p className="text-yellow-400 text-lg font-medium mb-4">Heritage Story Coming Soon</p>
+              <p className="text-gray-300 font-light">The complete story of Obsidian House will be revealed here.</p>
             </div>
           </div>
 

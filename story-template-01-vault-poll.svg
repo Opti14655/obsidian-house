@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Dark luxury gradient -->
+    <linearGradient id="storyBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a"/>
+      <stop offset="50%" style="stop-color:#0f0f0f"/>
+      <stop offset="100%" style="stop-color:#000000"/>
+    </linearGradient>
+    
+    <!-- Gold accent gradient -->
+    <linearGradient id="goldText" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+    
+    <!-- Subtle texture overlay -->
+    <pattern id="texture" patternUnits="userSpaceOnUse" width="100" height="100">
+      <rect width="100" height="100" fill="#1a1a1a"/>
+      <circle cx="20" cy="20" r="0.5" fill="#2a2a2a" opacity="0.3"/>
+      <circle cx="80" cy="60" r="0.5" fill="#2a2a2a" opacity="0.3"/>
+      <circle cx="50" cy="90" r="0.5" fill="#2a2a2a" opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1080" height="1920" fill="url(#storyBg)"/>
+  <rect width="1080" height="1920" fill="url(#texture)" opacity="0.1"/>
+  
+  <!-- Top section - Brand -->
+  <text x="540" y="200" text-anchor="middle" font-family="serif" font-size="32" font-weight="300" fill="url(#goldText)" letter-spacing="6px">OBSIDIAN HOUSE</text>
+  <line x1="240" y1="230" x2="840" y2="230" stroke="url(#goldText)" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Family Crest (smaller version) -->
+  <g transform="translate(540, 350) scale(0.4, 0.4)">
+    <!-- Ornate scrollwork -->
+    <path d="M-80 -50 Q-90 -60 -85 -70 Q-75 -75 -65 -65 L65 -65 Q75 -75 85 -70 Q90 -60 80 -50 L80 50 Q90 60 85 70 Q75 75 65 65 L-65 65 Q-75 75 -85 70 Q-90 60 -80 50 Z" 
+          fill="none" stroke="url(#goldText)" stroke-width="3"/>
+    
+    <!-- Central shield -->
+    <path d="M-50 -45 L50 -45 Q55 -45 55 -40 L55 40 Q55 55 0 65 Q-55 55 -55 40 L-55 -40 Q-55 -45 -50 -45 Z" 
+          fill="#0f0f0f" stroke="url(#goldText)" stroke-width="2"/>
+    
+    <!-- Eagle -->
+    <path d="M0 -30 Q-18 -33 -26 -27 Q-30 -22 -26 -18 Q-18 -15 0 -18 Q18 -15 26 -18 Q30 -22 26 -27 Q18 -33 0 -30 Z" 
+          fill="url(#goldText)"/>
+    
+    <!-- Lion -->
+    <path d="M-18 13 Q-21 10 -18 7 Q-13 4 -8 7 L8 7 Q13 4 18 7 Q21 10 18 13 Q13 16 8 13 L-8 13 Q-13 16 -18 13 Z" 
+          fill="url(#goldText)"/>
+    
+    <!-- Diagonal band -->
+    <path d="M-45 -23 L45 30 Q48 33 45 36 L42 39 Q39 42 36 39 L-45 6 Q-48 3 -45 0 L-42 -3 Q-39 -6 -45 -23 Z" 
+          fill="url(#goldText)" opacity="0.8"/>
+  </g>
+  
+  <!-- Main question -->
+  <text x="540" y="600" text-anchor="middle" font-family="serif" font-size="48" font-weight="300" fill="#ffffff" letter-spacing="2px">Are you ready for</text>
+  <text x="540" y="670" text-anchor="middle" font-family="serif" font-size="48" font-weight="300" fill="url(#goldText)" letter-spacing="2px">exclusive access?</text>
+  
+  <!-- Poll area placeholder -->
+  <rect x="140" y="800" width="800" height="300" rx="20" fill="#2a2a2a" stroke="url(#goldText)" stroke-width="2" opacity="0.3"/>
+  <text x="540" y="900" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#ccc" opacity="0.7">[Instagram Poll Sticker]</text>
+  <text x="540" y="940" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#ccc" opacity="0.7">YES - I'm ready</text>
+  <text x="540" y="980" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#ccc" opacity="0.7">NO - Tell me more</text>
+  
+  <!-- Bottom CTA -->
+  <text x="540" y="1400" text-anchor="middle" font-family="serif" font-size="28" font-weight="300" fill="#ffffff">Archive 001</text>
+  <text x="540" y="1450" text-anchor="middle" font-family="serif" font-size="24" font-weight="300" fill="url(#goldText)">Limited to 299 bottles</text>
+  
+  <!-- Call to action -->
+  <rect x="190" y="1550" width="700" height="80" rx="40" fill="none" stroke="url(#goldText)" stroke-width="2"/>
+  <text x="540" y="1600" text-anchor="middle" font-family="serif" font-size="32" font-weight="300" fill="url(#goldText)">DM "VAULT" to secure your place</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="300" r="3" fill="url(#goldText)" opacity="0.7"/>
+  <circle cx="980" cy="500" r="2" fill="url(#goldText)" opacity="0.5"/>
+  <circle cx="150" cy="1200" r="2.5" fill="url(#goldText)" opacity="0.6"/>
+  <circle cx="930" cy="1300" r="2" fill="url(#goldText)" opacity="0.4"/>
+</svg>

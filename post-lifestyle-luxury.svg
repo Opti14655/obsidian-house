@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Luxury marble background -->
+    <linearGradient id="marble" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f6f0"/>
+      <stop offset="30%" style="stop-color:#f5f2eb"/>
+      <stop offset="60%" style="stop-color:#f0ebe0"/>
+      <stop offset="100%" style="stop-color:#ede6d5"/>
+    </linearGradient>
+    
+    <!-- Marble veining -->
+    <pattern id="marbleVeins" patternUnits="userSpaceOnUse" width="200" height="200">
+      <rect width="200" height="200" fill="#f8f6f0"/>
+      <path d="M0 50 Q50 30 100 50 Q150 70 200 50" stroke="#e8e0d0" stroke-width="2" fill="none" opacity="0.4"/>
+      <path d="M0 120 Q80 100 160 120 Q180 125 200 120" stroke="#e8e0d0" stroke-width="1.5" fill="none" opacity="0.3"/>
+      <path d="M20 0 Q40 80 60 160 Q80 200 100 200" stroke="#e8e0d0" stroke-width="1" fill="none" opacity="0.2"/>
+    </pattern>
+    
+    <!-- Green bottle glass -->
+    <radialGradient id="greenBottle" cx="30%" cy="25%" r="70%">
+      <stop offset="0%" style="stop-color:#2d4a2b"/>
+      <stop offset="40%" style="stop-color:#1e3a1c"/>
+      <stop offset="80%" style="stop-color:#0f2a0d"/>
+      <stop offset="100%" style="stop-color:#051a03"/>
+    </radialGradient>
+    
+    <!-- Bottle highlights -->
+    <linearGradient id="bottleHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.4"/>
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.05"/>
+    </linearGradient>
+    
+    <!-- Black cap material -->
+    <radialGradient id="blackCap" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#2a2a2a"/>
+      <stop offset="50%" style="stop-color:#1a1a1a"/>
+      <stop offset="100%" style="stop-color:#0a0a0a"/>
+    </radialGradient>
+    
+    <!-- Gold accents -->
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+    
+    <!-- Luxury shadows -->
+    <filter id="luxuryShadow">
+      <feDropShadow dx="8" dy="12" stdDeviation="8" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    
+    <!-- Soft glow -->
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#marble)"/>
+  <rect width="1080" height="1080" fill="url(#marbleVeins)" opacity="0.6"/>
+  
+  <!-- Luxury surface reflection -->
+  <ellipse cx="540" cy="900" rx="300" ry="40" fill="#ffffff" opacity="0.1"/>
+  
+  <!-- Bottle shadow on marble -->
+  <ellipse cx="545" cy="880" rx="120" ry="30" fill="#000000" opacity="0.15"/>
+  
+  <!-- Main green bottle -->
+  <g transform="translate(540, 540)" filter="url(#luxuryShadow)">
+    
+    <!-- Bottle body -->
+    <path d="M-80 -180 
+             L-80 180 
+             Q-80 200 -60 200 
+             L60 200 
+             Q80 200 80 180 
+             L80 -180 
+             Q80 -200 60 -200 
+             L-60 -200 
+             Q-80 -200 -80 -180 Z" 
+          fill="url(#greenBottle)" 
+          stroke="#0f2a0d" stroke-width="1"/>
+    
+    <!-- Bottle shoulder -->
+    <path d="M-60 -200 
+             L-60 -240 
+             Q-60 -270 -30 -270 
+             L30 -270 
+             Q60 -270 60 -240 
+             L60 -200" 
+          fill="url(#greenBottle)" 
+          stroke="#0f2a0d" stroke-width="1"/>
+    
+    <!-- Bottle neck -->
+    <rect x="-25" y="-320" width="50" height="50" 
+          fill="url(#greenBottle)" stroke="#0f2a0d" stroke-width="1"/>
+    
+    <!-- Black ornate cap -->
+    <g transform="translate(0, -350)">
+      <!-- Cap base -->
+      <ellipse cx="0" cy="0" rx="35" ry="12" 
+               fill="url(#blackCap)" stroke="#000000" stroke-width="1"/>
+      
+      <!-- Ornate cap top -->
+      <path d="M-30 -5 
+               L-20 -25 
+               L-10 -35 
+               L0 -40 
+               L10 -35 
+               L20 -25 
+               L30 -5 
+               L25 -10 
+               L15 -25 
+               L5 -30 
+               L-5 -30 
+               L-15 -25 
+               L-25 -10 Z" 
+            fill="url(#blackCap)" 
+            stroke="#000000" stroke-width="1"/>
+      
+      <!-- Cap ridges -->
+      <g opacity="0.3">
+        <line x1="-25" y1="-8" x2="25" y2="-8" stroke="#4a4a4a" stroke-width="1"/>
+        <line x1="-20" y1="-5" x2="20" y2="-5" stroke="#4a4a4a" stroke-width="1"/>
+      </g>
+    </g>
+    
+    <!-- Premium label -->
+    <rect x="-60" y="-50" width="120" height="140" rx="8" 
+          fill="#f8f6f0" stroke="url(#goldAccent)" stroke-width="2" opacity="0.95"/>
+    
+    <rect x="-55" y="-45" width="110" height="130" rx="6" 
+          fill="#ffffff" opacity="0.9"/>
+    
+    <!-- Family crest on label -->
+    <g transform="scale(0.25, 0.25) translate(0, -20)">
+      <!-- Ornate scrollwork -->
+      <path d="M-80 -50 Q-90 -60 -85 -70 Q-75 -75 -65 -65 L65 -65 Q75 -75 85 -70 Q90 -60 80 -50 L80 50 Q90 60 85 70 Q75 75 65 65 L-65 65 Q-75 75 -85 70 Q-90 60 -80 50 Z" 
+            fill="none" stroke="#1a1a1a" stroke-width="4"/>
+      
+      <!-- Central shield -->
+      <path d="M-50 -45 L50 -45 Q55 -45 55 -40 L55 40 Q55 55 0 65 Q-55 55 -55 40 L-55 -40 Q-55 -45 -50 -45 Z" 
+            fill="#1a1a1a" stroke="url(#goldAccent)" stroke-width="3"/>
+      
+      <!-- Eagle -->
+      <path d="M0 -30 Q-18 -33 -26 -27 Q-30 -22 -26 -18 Q-18 -15 0 -18 Q18 -15 26 -18 Q30 -22 26 -27 Q18 -33 0 -30 Z" 
+            fill="url(#goldAccent)"/>
+      
+      <!-- Lion -->
+      <path d="M-18 13 Q-21 10 -18 7 Q-13 4 -8 7 L8 7 Q13 4 18 7 Q21 10 18 13 Q13 16 8 13 L-8 13 Q-13 16 -18 13 Z" 
+            fill="url(#goldAccent)"/>
+      
+      <!-- Diagonal band -->
+      <path d="M-45 -23 L45 30 Q48 33 45 36 L42 39 Q39 42 36 39 L-45 6 Q-48 3 -45 0 L-42 -3 Q-39 -6 -45 -23 Z" 
+            fill="url(#goldAccent)" opacity="0.8"/>
+    </g>
+    
+    <!-- Brand text -->
+    <text x="0" y="15" text-anchor="middle" 
+          font-family="serif" font-size="16" font-weight="bold" 
+          fill="#1a1a1a">OBSIDIAN</text>
+    <text x="0" y="35" text-anchor="middle" 
+          font-family="serif" font-size="16" font-weight="bold" 
+          fill="#1a1a1a">HOUSE</text>
+    
+    <!-- Archive designation -->
+    <text x="0" y="60" text-anchor="middle" 
+          font-family="serif" font-size="10" font-weight="normal" 
+          fill="url(#goldAccent)">ARCHIVE No.001</text>
+    
+    <!-- Glass highlights -->
+    <path d="M-60 -120 Q-40 -140 -20 -120 L-25 120 Q-45 140 -60 120 Z" 
+          fill="url(#bottleHighlight)" opacity="0.6"/>
+    
+    <!-- Secondary highlight -->
+    <path d="M50 -80 Q60 -100 70 -80 L65 100 Q55 120 50 100 Z" 
+          fill="url(#bottleHighlight)" opacity="0.3"/>
+    
+  </g>
+  
+  <!-- Luxury accessories -->
+  <!-- Vintage pocket watch -->
+  <g transform="translate(200, 300)" opacity="0.4">
+    <circle cx="0" cy="0" r="40" fill="#B8860B" opacity="0.3"/>
+    <circle cx="0" cy="0" r="35" fill="#FFD700" opacity="0.2"/>
+    <line x1="0" y1="0" x2="0" y2="-20" stroke="#8B4513" stroke-width="2"/>
+    <line x1="0" y1="0" x2="15" y2="0" stroke="#8B4513" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Fountain pen -->
+  <g transform="translate(850, 750) rotate(25)" opacity="0.3">
+    <rect x="-3" y="-60" width="6" height="120" rx="3" fill="#1a1a1a"/>
+    <ellipse cx="0" cy="-65" rx="4" ry="8" fill="#FFD700"/>
+  </g>
+  
+  <!-- Luxury text overlay -->
+  <g transform="translate(540, 100)" filter="url(#softGlow)">
+    <text x="0" y="0" text-anchor="middle" 
+          font-family="serif" font-size="32" font-weight="300" 
+          fill="#2d4a2b" letter-spacing="4px">REFINED BY TRADITION</text>
+  </g>
+  
+  <g transform="translate(540, 950)">
+    <text x="0" y="0" text-anchor="middle" 
+          font-family="serif" font-size="24" font-weight="300" 
+          fill="#8B4513" letter-spacing="2px">OBSIDIAN HOUSE</text>
+  </g>
+  
+  <!-- Subtle corner decorations -->
+  <g opacity="0.2">
+    <circle cx="100" cy="100" r="2" fill="#B8860B"/>
+    <circle cx="980" cy="100" r="1.5" fill="#B8860B"/>
+    <circle cx="100" cy="980" r="2" fill="#B8860B"/>
+    <circle cx="980" cy="980" r="1.5" fill="#B8860B"/>
+  </g>
+  
+  <!-- Light ray effect -->
+  <path d="M0 0 L400 400 L0 800 Z" fill="url(#bottleHighlight)" opacity="0.02"/>
+</svg>

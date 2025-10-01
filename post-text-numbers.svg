@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="darkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a"/>
+      <stop offset="100%" style="stop-color:#000000"/>
+    </linearGradient>
+    
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="1080" height="1080" fill="url(#darkBg)"/>
+  
+  <!-- Big number -->
+  <text x="540" y="350" text-anchor="middle" font-family="serif" font-size="120" font-weight="300" fill="url(#goldAccent)">299</text>
+  
+  <!-- Explanation -->
+  <text x="540" y="450" text-anchor="middle" font-family="serif" font-size="32" font-weight="300" fill="#ffffff">bottles.</text>
+  <text x="540" y="500" text-anchor="middle" font-family="serif" font-size="32" font-weight="300" fill="#ffffff">That's it.</text>
+  
+  <text x="540" y="600" text-anchor="middle" font-family="serif" font-size="28" font-weight="300" fill="#ccc">When they're gone,</text>
+  <text x="540" y="640" text-anchor="middle" font-family="serif" font-size="28" font-weight="300" fill="#ccc">they're gone.</text>
+  
+  <!-- Brand -->
+  <text x="540" y="780" text-anchor="middle" font-family="serif" font-size="20" font-weight="300" fill="#999" letter-spacing="2px">OBSIDIAN HOUSE</text>
+  <text x="540" y="810" text-anchor="middle" font-family="serif" font-size="16" font-weight="300" fill="url(#goldAccent)" letter-spacing="1px">ARCHIVE No.001</text>
+</svg>

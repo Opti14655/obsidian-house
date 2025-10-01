@@ -64,6 +64,12 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    
+    <!-- Cinematic vignette -->
+    <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.5" />
+    </radialGradient>
   </defs>
   
   <!-- Instagram Reel 4:5 cinematic background -->
@@ -249,7 +255,7 @@
           font-family="serif" font-size="16" font-weight="normal" 
           fill="#DAA520" filter="url(#textGlow)">ARCHIVE No.001</text>
     
-    <!-- Secondary highlights */
+    <!-- Secondary highlights -->
     <path d="M70 -100 Q80 -120 90 -100 L85 180 Q75 200 70 180 Z" 
           fill="url(#glowingCrest)" opacity="0.2"/>
   </g>
@@ -304,7 +310,7 @@
           stroke="#FFA500" stroke-width="2" fill="none" opacity="0.3"/>
   </g>
   
-  <!-- Final luxury sparkle accents */
+  <!-- Final luxury sparkle accents -->
   <g opacity="1" filter="url(#textGlow)">
     <circle cx="400" cy="450" r="2" fill="#FFD700"/>
     <circle cx="680" cy="500" r="1.5" fill="#FFA500"/>
@@ -315,11 +321,5 @@
   </g>
   
   <!-- Cinematic vignette -->
-  <defs>
-    <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
-      <stop offset="0%" style="stop-color:#000000;stop-opacity:0" />
-      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.5" />
-    </radialGradient>
-  </defs>
   <rect width="1080" height="1350" fill="url(#vignette)"/>
 </svg>

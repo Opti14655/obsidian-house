@@ -27,7 +27,7 @@
       <stop offset="30%" style="stop-color:#DDBF94;stop-opacity:1" />
       <stop offset="70%" style="stop-color:#8B7355;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
-    </radialGradient>
+    </linearGradient>
     
     <!-- Jasmine petal -->
     <radialGradient id="jasminePetal" cx="30%" cy="30%" r="70%">

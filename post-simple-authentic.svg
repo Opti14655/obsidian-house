@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Simple dark background -->
+    <radialGradient id="darkBg" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" style="stop-color:#2a2a2a"/>
+      <stop offset="100%" style="stop-color:#0a0a0a"/>
+    </radialGradient>
+    
+    <!-- Green bottle -->
+    <radialGradient id="greenBottle" cx="30%" cy="25%" r="70%">
+      <stop offset="0%" style="stop-color:#2d4a2b"/>
+      <stop offset="60%" style="stop-color:#1a3018"/>
+      <stop offset="100%" style="stop-color:#0d1a0b"/>
+    </radialGradient>
+    
+    <!-- Black cap -->
+    <radialGradient id="blackCap" cx="40%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:#3a3a3a"/>
+      <stop offset="100%" style="stop-color:#0a0a0a"/>
+    </radialGradient>
+    
+    <!-- Simple highlight -->
+    <linearGradient id="highlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.05"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#darkBg)"/>
+  
+  <!-- Simple shadow -->
+  <ellipse cx="540" cy="950" rx="150" ry="25" fill="#000000" opacity="0.3"/>
+  
+  <!-- The bottle - centered, simple -->
+  <g transform="translate(540, 540)">
+    
+    <!-- Main body -->
+    <path d="M-90 -200 L-90 200 Q-90 220 -70 220 L70 220 Q90 220 90 200 L90 -200 Q90 -220 70 -220 L-70 -220 Q-90 -220 -90 -200 Z" 
+          fill="url(#greenBottle)" stroke="#0d1a0b" stroke-width="1"/>
+    
+    <!-- Shoulder -->
+    <path d="M-70 -220 L-70 -260 Q-70 -290 -40 -290 L40 -290 Q70 -290 70 -260 L70 -220" 
+          fill="url(#greenBottle)" stroke="#0d1a0b" stroke-width="1"/>
+    
+    <!-- Neck -->
+    <rect x="-30" y="-340" width="60" height="50" fill="url(#greenBottle)" stroke="#0d1a0b" stroke-width="1"/>
+    
+    <!-- Cap -->
+    <g transform="translate(0, -370)">
+      <!-- Base -->
+      <ellipse cx="0" cy="0" rx="40" ry="15" fill="url(#blackCap)"/>
+      <!-- Top -->
+      <path d="M-35 -8 L-25 -30 L-10 -40 L0 -45 L10 -40 L25 -30 L35 -8 Z" 
+            fill="url(#blackCap)" stroke="#000" stroke-width="1"/>
+    </g>
+    
+    <!-- Label area -->
+    <rect x="-70" y="-80" width="140" height="160" rx="12" fill="#f5f2eb" opacity="0.95"/>
+    
+    <!-- Simple crest outline -->
+    <g transform="scale(0.3, 0.3)">
+      <path d="M-60 -40 L60 -40 Q70 -40 70 -30 L70 30 Q70 50 0 65 Q-70 50 -70 30 L-70 -30 Q-70 -40 -60 -40 Z" 
+            fill="#1a1a1a" stroke="#8B4513" stroke-width="2"/>
+      <path d="M0 -25 Q-15 -28 -20 -22 Q-22 -18 -18 -15 Q-10 -12 0 -15 Q10 -12 18 -15 Q22 -18 20 -22 Q15 -28 0 -25 Z" 
+            fill="#8B4513"/>
+    </g>
+    
+    <!-- Simple text -->
+    <text x="0" y="20" text-anchor="middle" font-family="serif" font-size="18" fill="#1a1a1a">OBSIDIAN HOUSE</text>
+    <text x="0" y="50" text-anchor="middle" font-family="serif" font-size="12" fill="#666">ARCHIVE No.001</text>
+    
+    <!-- One simple highlight -->
+    <path d="M-70 -150 Q-50 -170 -30 -150 L-35 150 Q-55 170 -70 150 Z" 
+          fill="url(#highlight)" opacity="0.4"/>
+  </g>
+</svg>

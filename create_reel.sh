@@ -12,12 +12,12 @@ mkdir -p frames output
 
 echo "📸 Converting SVG files to high-quality PNG frames..."
 
-# Convert SVGs to PNG (high quality for Instagram)
-magick reel-01-opening-crest.svg -density 300 -background transparent frames/scene01.png
-magick reel-02-bottle-hero.svg -density 300 -background transparent frames/scene02.png
-magick reel-03-floating-ingredients.svg -density 300 -background transparent frames/scene03.png
-magick reel-04-luxury-box.svg -density 300 -background transparent frames/scene04.png
-magick reel-05-final-centerpiece.svg -density 300 -background transparent frames/scene05.png
+# Convert SVGs to PNG using rsvg-convert (better SVG support)
+rsvg-convert -w 1080 -h 1350 -f png -o frames/scene01.png reel-01-opening-crest.svg
+rsvg-convert -w 1080 -h 1350 -f png -o frames/scene02.png reel-02-bottle-hero.svg  
+rsvg-convert -w 1080 -h 1350 -f png -o frames/scene03.png reel-03-floating-ingredients.svg
+rsvg-convert -w 1080 -h 1350 -f png -o frames/scene04.png reel-04-luxury-box.svg
+rsvg-convert -w 1080 -h 1350 -f png -o frames/scene05.png reel-05-final-centerpiece.svg
 
 echo "🎥 Creating video with professional timing..."
 
