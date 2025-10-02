@@ -10,8 +10,12 @@ interface FormData {
   lastName: string;
   email: string;
   phone: string;
+  address: string;
+  addressLine2: string;
   city: string;
   state: string;
+  postalCode: string;
+  country: string;
   agreement: boolean;
 }
 
@@ -30,8 +34,12 @@ export function PreOrderForm() {
     lastName: '',
     email: '',
     phone: '',
+    address: '',
+    addressLine2: '',
     city: '',
     state: '',
+    postalCode: '',
+    country: 'United States',
     agreement: false
   });
 
@@ -76,8 +84,12 @@ export function PreOrderForm() {
           lastName: '',
           email: '',
           phone: '',
+          address: '',
+          addressLine2: '',
           city: '',
           state: '',
+          postalCode: '',
+          country: 'United States',
           agreement: false
         });
       } else {
@@ -202,6 +214,31 @@ export function PreOrderForm() {
         />
       </div>
       
+      <div className="mb-4">
+        <input 
+          type="text" 
+          name="address"
+          value={formData.address}
+          onChange={handleInputChange}
+          placeholder="Street Address" 
+          className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500"
+          required
+          disabled={isSubmitting}
+        />
+      </div>
+      
+      <div className="mb-4">
+        <input 
+          type="text" 
+          name="addressLine2"
+          value={formData.addressLine2}
+          onChange={handleInputChange}
+          placeholder="Apartment, suite, etc. (optional)" 
+          className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500"
+          disabled={isSubmitting}
+        />
+      </div>
+      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
         <input 
           type="text" 
@@ -225,6 +262,48 @@ export function PreOrderForm() {
         />
       </div>
       
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <input 
+          type="text" 
+          name="postalCode"
+          value={formData.postalCode}
+          onChange={handleInputChange}
+          placeholder="Postal/Zip Code" 
+          className="bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500"
+          required
+          disabled={isSubmitting}
+        />
+        <select 
+          name="country"
+          value={formData.country}
+          onChange={(e) => setFormData(prev => ({...prev, country: e.target.value}))}
+          className="bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500"
+          required
+          disabled={isSubmitting}
+        >
+          <option value="United States">United States</option>
+          <option value="Canada">Canada</option>
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="Germany">Germany</option>
+          <option value="France">France</option>
+          <option value="Italy">Italy</option>
+          <option value="Spain">Spain</option>
+          <option value="Netherlands">Netherlands</option>
+          <option value="Belgium">Belgium</option>
+          <option value="Switzerland">Switzerland</option>
+          <option value="Austria">Austria</option>
+          <option value="Sweden">Sweden</option>
+          <option value="Norway">Norway</option>
+          <option value="Denmark">Denmark</option>
+          <option value="Australia">Australia</option>
+          <option value="New Zealand">New Zealand</option>
+          <option value="Japan">Japan</option>
+          <option value="Singapore">Singapore</option>
+          <option value="Hong Kong">Hong Kong</option>
+          <option value="Other">Other (Contact us)</option>
+        </select>
+      </div>
+      
       <div className="mb-6">
         <label className="flex items-start text-left text-gray-300 text-sm">
           <input 
@@ -238,7 +317,8 @@ export function PreOrderForm() {
           />
           <span>
             By submitting this pre-order, I understand that I am committing to purchase ARCHIVE No.001 
-            for $160 (or discounted price if applicable) upon release. I will be contacted with payment details when the fragrance launches.
+            for $160 (or discounted price if applicable) upon release. The shipping address provided will be used 
+            for delivery. I will be contacted with payment details when the fragrance launches.
           </span>
         </label>
       </div>
