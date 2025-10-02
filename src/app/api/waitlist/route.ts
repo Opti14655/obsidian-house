@@ -1,21 +1,27 @@
 import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
 import { generateDiscountCode } from '@/lib/utils';
 
-// Check if we have a database URL before initializing Prisma
-let prisma: PrismaClient | null = null;
-try {
-  if (process.env.DATABASE_URL) {
-    prisma = new PrismaClient();
+// Dynamic import of Prisma to handle build issues
+let prisma: any = null;
+
+async function getPrismaClient() {
+  if (!prisma && process.env.DATABASE_URL) {
+    try {
+      const { PrismaClient } = await import('@prisma/client');
+      prisma = new PrismaClient();
+    } catch (error) {
+      console.warn('Failed to initialize database:', error);
+    }
   }
-} catch (error) {
-  console.warn('Database not available:', error);
+  return prisma;
 }
 
 export async function POST(request: Request) {
   try {
+    const client = await getPrismaClient();
+    
     // If no database is available, return a fallback response
-    if (!prisma) {
+    if (!client) {
       return NextResponse.json(
         { 
           error: 'System is being updated. Please try again in a few moments.',
@@ -29,7 +35,7 @@ export async function POST(request: Request) {
     const { email, firstName, lastName, phone, city, state } = body;
 
     // Check if email already exists
-    const existingUser = await prisma.waitlist.findUnique({
+    const existingUser = await client.waitlist.findUnique({
       where: { email }
     });
 
@@ -39,14 +45,14 @@ export async function POST(request: Request) {
           error: 'Email already registered',
           discountCode: existingUser.discountCode,
           discountPercent: existingUser.discountPercent,
-          position: await getWaitlistPosition(existingUser.id)
+          position: await getWaitlistPosition(existingUser.id, client)
         }, 
         { status: 400 }
       );
     }
 
     // Count current waitlist entries
-    const currentCount = await prisma.waitlist.count();
+    const currentCount = await client.waitlist.count();
     
     // Determine discount percentage (20% for first 50, then 0%)
     const discountPercent = currentCount < 50 ? 20 : 0;
@@ -55,7 +61,7 @@ export async function POST(request: Request) {
     const discountCode = generateDiscountCode();
 
     // Create waitlist entry
-    const waitlistEntry = await prisma.waitlist.create({
+    const waitlistEntry = await client.waitlist.create({
       data: {
         email,
         discountCode,
@@ -95,8 +101,10 @@ export async function POST(request: Request) {
 
 export async function GET() {
   try {
+    const client = await getPrismaClient();
+    
     // If no database is available, return fallback status
-    if (!prisma) {
+    if (!client) {
       return NextResponse.json({
         totalSignups: 0,
         discountSpotsLeft: 50,
@@ -105,7 +113,7 @@ export async function GET() {
       });
     }
 
-    const totalCount = await prisma.waitlist.count();
+    const totalCount = await client.waitlist.count();
     const discountSpotsLeft = Math.max(0, 50 - totalCount);
     
     return NextResponse.json({
@@ -122,14 +130,14 @@ export async function GET() {
   }
 }
 
-async function getWaitlistPosition(entryId: string): Promise<number> {
-  const entry = await prisma.waitlist.findUnique({
+async function getWaitlistPosition(entryId: string, client: any): Promise<number> {
+  const entry = await client.waitlist.findUnique({
     where: { id: entryId }
   });
   
   if (!entry) return 0;
   
-  const earlierEntries = await prisma.waitlist.count({
+  const earlierEntries = await client.waitlist.count({
     where: {
       createdAt: {
         lt: entry.createdAt
