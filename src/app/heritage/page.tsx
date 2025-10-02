@@ -1,5 +1,4 @@
 import { Shield } from 'lucide-react'
-import Image from 'next/image'
 
 // Heritage page - Brand story and founding principles
 export default function HeritagePage() {

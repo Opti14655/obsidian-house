@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { generateDiscountCode } from '@/lib/utils';
 
 // Dynamic import of Prisma to handle build issues
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let prisma: any = null;
 
 async function getPrismaClient() {
@@ -130,6 +131,7 @@ export async function GET() {
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function getWaitlistPosition(entryId: string, client: any): Promise<number> {
   const entry = await client.waitlist.findUnique({
     where: { id: entryId }
